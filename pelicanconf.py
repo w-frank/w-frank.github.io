@@ -10,12 +10,8 @@ TIMEZONE = 'Europe/London'
 DEFAULT_DATE_FORMAT = '%A %d %B %Y'
 DEFAULT_LANG = 'en'
 
-STATIC_PATHS = ['CNAME']
-
-EXTRA_PATH_METADATA = {
-    ... other extra path metadata ...
-    'CNAME': {'path': 'CNAME'},
-}
+STATIC_PATHS = ['images', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 # Specify a customized theme, via path relative to the settings file
 THEME = "theme/cebong"
