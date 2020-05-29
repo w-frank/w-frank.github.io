@@ -5,6 +5,7 @@ My personal site built with [Pelican](http://getpelican.com) and [GitHub Pages](
 ## Deployment
 ```shell
 git clone https://github.com/w-frank/w-frank.github.io.git
--- add content --
+cd w-frank.github.io
+-- add/update content --
 publish.bat "commit message"
 ```
