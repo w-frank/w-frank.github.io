@@ -10,6 +10,8 @@ TIMEZONE = 'Europe/London'
 DEFAULT_DATE_FORMAT = '%A %d %B %Y'
 DEFAULT_LANG = 'en'
 
+STATIC_PATHS = ['extra\CNAME']
+
 # Specify a customized theme, via path relative to the settings file
 THEME = "theme/cebong"
 
