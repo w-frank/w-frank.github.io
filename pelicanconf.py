@@ -12,6 +12,11 @@ DEFAULT_LANG = 'en'
 
 STATIC_PATHS = ['extra\CNAME']
 
+EXTRA_PATH_METADATA = {
+    ... other extra path metadata ...
+    'extra/CNAME': {'path': 'CNAME'},
+}
+
 # Specify a customized theme, via path relative to the settings file
 THEME = "theme/cebong"
 
