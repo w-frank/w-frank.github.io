@@ -20,6 +20,10 @@ html, body {
     font-weight: bold;
 }
 
+.entry-content {
+    padding-bottom: 10px  !important;
+}
+
 /* unvisited link */
 a:link {
     color: rgb(86, 112, 140);

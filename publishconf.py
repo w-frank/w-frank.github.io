@@ -7,11 +7,11 @@ SITENAME = 'WILL FRANK'
 SITEURL = ''
 PATH = 'content'
 TIMEZONE = 'Europe/London'
-#DEFAULT_DATE_FORMAT = '%A %d %B %Y'
+# DEFAULT_DATE_FORMAT = '%A %d %B %Y'
 DEFAULT_LANG = 'en'
 
 STATIC_PATHS = ['images', 'extra/CNAME']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, }
 
 # Specify a customized theme, via path relative to the settings file
 THEME = "theme/mytheme"
@@ -27,13 +27,13 @@ AUTHOR_FEED_RSS = None
 LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'))
 
-CATEGORIES = (('blog'),('test'))
+CATEGORIES = (('blog'), ('test'))
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
