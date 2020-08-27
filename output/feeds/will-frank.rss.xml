@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>A Pelican Blog - Will Frank</title><link>/</link><description></description><lastBuildDate>Fri, 03 Dec 2010 10:20:00 +0000</lastBuildDate><item><title>A Second Posting</title><link>/a-second-posting.html</link><description>
+        &lt;header id="banner" class="body"&gt;
+                &lt;h1&gt;&lt;a href=""&gt;The Game of Logic&lt;/a&gt;&lt;/h1&gt;
+                &lt;nav&gt;
+                    &lt;a href="/category/blog.html"&gt;Blog&lt;/a&gt;&amp;nbsp;
+                    &lt;a href="/pages/about.html"&gt;About&lt;/a&gt;&amp;nbsp;
+                &lt;/nav&gt;
+                &lt;div id="social" class="body"&gt;
+                    &lt;a href="https://github.com/w-frank" title="GitHub" class="icon fa fa-github"&gt;&lt;/a&gt;
+                &lt;/div&gt;
+        &lt;/header&gt;&lt;!-- /#banner --&gt;
+
+&lt;section id="content" class="body"&gt;
+  &lt;article&gt;
+    &lt;header&gt;
+      &lt;h1 class="entry-title"&gt;
+        &lt;a href="a-second-posting.html" rel="bookmark" title="Permalink to A Second Posting"&gt;A Second Posting&lt;/a&gt;&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;div class="entry-content"&gt;
+&lt;footer class="post-info"&gt;
+        &lt;abbr class="published" title="2010-12-03T10:20:00+00:00"&gt;
+                Friday 03 December 2010
+        &lt;/abbr&gt;
+&lt;/footer&gt;&lt;!-- /.post-info --&gt;      &lt;p&gt;Lorem ipsum dolor sit amet consectetuer adipiscing elit. Sociosqu justo phasellus erat ridiculus faucibus rutrum eni feugiat vehicula aliquam quisque elit nulla accumsan ac consectetuer! Fames egestas hac euismod sagittis ullamcorper dignissim. Suspendisse donec sapien etiam orci …&lt;/p&gt;&lt;/div&gt;&lt;/article&gt;&lt;/section&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Will Frank</dc:creator><pubDate>Fri, 03 Dec 2010 10:20:00 +0000</pubDate><guid isPermaLink="false">tag:None,2010-12-03:/a-second-posting.html</guid><category>Blog</category></item><item><title>A Very Interesting First Post</title><link>/a-very-interesting-first-post.html</link><description>
+        &lt;header id="banner" class="body"&gt;
+                &lt;h1&gt;&lt;a href=""&gt;The Game of Logic&lt;/a&gt;&lt;/h1&gt;
+                &lt;nav&gt;
+                    &lt;a href="/category/blog.html"&gt;Blog&lt;/a&gt;&amp;nbsp;
+                    &lt;a href="/pages/about.html"&gt;About&lt;/a&gt;&amp;nbsp;
+                &lt;/nav&gt;
+                &lt;div id="social" class="body"&gt;
+                    &lt;a href="https://github.com/w-frank" title="GitHub" class="icon fa fa-github"&gt;&lt;/a&gt;
+                &lt;/div&gt;
+        &lt;/header&gt;&lt;!-- /#banner --&gt;
+
+&lt;section id="content" class="body"&gt;
+  &lt;article&gt;
+    &lt;header&gt;
+      &lt;h1 class="entry-title"&gt;
+        &lt;a href="a-very-interesting-first-post.html" rel="bookmark" title="Permalink to A Very Interesting First Post"&gt;A Very Interesting First Post&lt;/a&gt;&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;div class="entry-content"&gt;
+&lt;footer class="post-info"&gt;
+        &lt;abbr class="published" title="2010-12-03T10:20:00+00:00"&gt;
+                Friday 03 December 2010
+        &lt;/abbr&gt;
+&lt;/footer&gt;&lt;!-- /.post-info --&gt;      &lt;p&gt;Lorem ipsum dolor sit amet consectetuer adipiscing elit. Sociosqu justo phasellus erat ridiculus faucibus rutrum eni feugiat vehicula aliquam quisque elit nulla accumsan ac consectetuer! Fames egestas hac euismod sagittis ullamcorper dignissim. Suspendisse donec sapien …&lt;/p&gt;&lt;/div&gt;&lt;/article&gt;&lt;/section&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Will Frank</dc:creator><pubDate>Fri, 03 Dec 2010 10:20:00 +0000</pubDate><guid isPermaLink="false">tag:None,2010-12-03:/a-very-interesting-first-post.html</guid><category>Blog</category></item></channel></rss>
