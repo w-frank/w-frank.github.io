@@ -5,12 +5,12 @@
 {% block content %}
 <div class="row">
     <div class="col-md-8">
-        <h2><a href="/{{ article.slug }}.html">{{ article.title }}</a></h2>
-        <label>Published: {{ article.date.strftime("%-d %B, %Y")}}</label>
-        {{ article.content }}
+        <h3 class="font-weight-bold"><a href="/{{ article.slug }}.html">{{ article.title }}</a></h3>
+        <label class="font-weight-normal text-muted">Published: {{ article.date.strftime("%-d %B, %Y")}}</label>
+        <p>{{ article.content }}</p>
     </div>
     <div class="col-md-4">
-        <h3>Recent Posts</h3>
+        <h4 class="font-weight-bold">Recent Posts</h4>
         {% set recent = articles if not all_articles else all_articles %}
         <ul id="recent-posts">
             {% for a in recent %}
@@ -21,6 +21,12 @@
             {% endif %}
             {% endfor %}
         </ul>
+        <h4 class="font-weight-bold">Categories</h4>
+        {% for category, articles in categories %}
+        <ul id="category-list">
+            <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+        </ul>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

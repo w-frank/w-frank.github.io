@@ -1,6 +1,6 @@
 Title: A Second Posting
 Date: 2010-12-03 10:20
-Category: Blog
+Category: Second
 
 Lorem ipsum dolor sit amet consectetuer adipiscing elit. Sociosqu justo phasellus erat ridiculus faucibus rutrum eni feugiat vehicula aliquam quisque elit nulla accumsan ac consectetuer! Fames egestas hac euismod sagittis ullamcorper dignissim. Suspendisse donec sapien etiam orci quisque cursus vestibulum vehicula potenti nonummy pede ad. Orci sapien ac diam ve nibh faucibus scelerisque cursus class. Curae curabitur nam etiam. Iaculis per. Elementum nascetur vitae non sodales vitae tempus facilisis rutrum. Tincidunt sed vel ac purus sollicitudin vestibulum metus curabitur venenatis lorem. Elit eni taciti malesuada non litora. Aenean. Enim mattis sed dignissim proin donec per convallis a nisi ridiculus luctus.
 

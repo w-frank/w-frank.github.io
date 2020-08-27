@@ -6,23 +6,33 @@
 <div class="row">
     <div class="col-md-8">
         {% for article in articles %}
-        <h2><a href="/{{ article.slug }}.html">{{ article.title }}</a></h2>
-        <label>Published: {{ article.date.strftime("%-d %B, %Y")}}</label>
-        {{ article.content }}
+        <h3 class="font-weight-bold"><a href="/{{ article.slug }}.html">{{ article.title }}</a></h3>
+        <label class="font-weight-normal text-muted">Published: {{ article.date.strftime("%-d %B, %Y")}}</label>
+        <p>{{ article.content }}</p>
         {% else %}
         No posts yet!
         {% endfor %}
     </div>
     <div class="col-md-4">
-        <h3>Recent Posts</h3>
+        <h4 class="font-weight-bold">Recent Posts</h4>
         {% set recent = articles if not all_articles else all_articles %}
         <ul id="recent-posts">
             {% for a in recent %}
             {% if loop.index <= 6 %}
-            <li>
-                <a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a>
-            </li>
+            <li><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
             {% endif %}
+            {% endfor %}
+        </ul>
+        <h4 class="font-weight-bold">Categories</h4>
+        <ul id="category-list">
+            {% for category, articles in categories %}
+            <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+            {% endfor %}
+        </ul>
+        <h4 class="font-weight-bold">Tags</h4>
+        <ul id="tag-list">
+            {% for tag, articles in tags %}
+            <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
             {% endfor %}
         </ul>
     </div>
