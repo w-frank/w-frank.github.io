@@ -4,18 +4,27 @@
 
 {% block content %}
 <div class="row">
-<div class="col-md-8">
-<div class="page">
-<div class="text">
-{% for article in articles %}
-<h2><a href="/{{ article.slug }}.html">{{ article.title }}</a></h2>
-<label>Published: {{ article.date.strftime("%-d %B, %Y")}}</label>
-{{ article.content }}
-{% else %}
-No posts yet!
-{% endfor %}
-</div>
-</div>
-</div>
+    <div class="col-md-8">
+        {% for article in articles %}
+        <h2><a href="/{{ article.slug }}.html">{{ article.title }}</a></h2>
+        <label>Published: {{ article.date.strftime("%-d %B, %Y")}}</label>
+        {{ article.content }}
+        {% else %}
+        No posts yet!
+        {% endfor %}
+    </div>
+    <div class="col-md-4">
+        <h3>Recent Posts</h3>
+        {% set recent = articles if not all_articles else all_articles %}
+        <ul id="recent-posts">
+            {% for a in recent %}
+            {% if loop.index <= 6 %}
+            <li>
+                <a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 {% endblock %}
