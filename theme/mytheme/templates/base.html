@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css" rel="stylesheet">
+        <title>{% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body>
+        <div class="topnav"><div class='title'>{{ SITENAME }}</div></div>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+    </body>
+</html>

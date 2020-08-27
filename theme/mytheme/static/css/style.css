@@ -1,0 +1,82 @@
+html, body {
+    margin: 0;
+    font-size: 14px;
+}
+
+.title {
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    float: left;
+}
+
+.topnav {
+    font-family: 'Lato', sans-serif;
+    height: 25px;
+    display: block;
+    color: #aaa;
+    text-align: left;
+    background-color: whitesmoke;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* unvisited link */
+a:link {
+    color: #333;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    /*color: rgb(86, 112, 140);*/
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: rgb(86, 112, 140);
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    /*color: rgb(86, 112, 140);*/
+    text-decoration: none;
+}
+
+.text {
+    font-size: 14px;
+    font-family: 'Vollkorn', serif;
+    width: 740px;
+    margin-left: 0px;
+    /* margin-right: auto;*/
+    color: #222222;
+}
+
+.page {
+    margin: 0 auto;
+    max-width: 960px;
+    color: #333;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    width: 60%;
+    font-size: 21px;
+    color: rgb(39, 40, 34);
+    margin-left: 0px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+label {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    font-size: 14px;
+    color: #777;
+    margin-left: 0px;
+    font-weight: 400;
+}
