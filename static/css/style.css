@@ -4,11 +4,12 @@ html, body {
 }
 
 .title {
-    padding-top: 5px;
+    padding-top: 3px;
     padding-right: 0px;
     padding-bottom: 0px;
     padding-left: 20px;
     float: left;
+    font-size: 17px;
 }
 
 .topnav {
