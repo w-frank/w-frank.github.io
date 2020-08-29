@@ -1,11 +1,11 @@
-Swift Action Needed: Designing a Swift Caller
-##############
-:date: 2020-08-29 09:50
-:modified:
-:tags: wildlife, conservation, nature, technology
-:category: Conservation
-:authors: Will Frank
-:summary: A guide to designing a Swift caller:  how to help protect Swifts in your home and garden.
+Title: Swift Action Needed: Designing a Swift Caller
+Date: 2020-08-29 09:50
+Modified:
+Category: Conservation
+Tags: wildlife, conservation, nature, technology
+Slug: swift-action-needed
+Authors: Will Frank
+Summary: A guide to designing a Swift caller: how to help protect Swifts in your home and garden using Arduino.
 
 # Swift Action Needed: Designing a Swift Caller
 
