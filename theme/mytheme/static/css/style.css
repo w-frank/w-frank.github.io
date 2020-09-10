@@ -18,6 +18,7 @@ html, body {
 
 .navbar-brand {
     float: none;
+    letter-spacing: 0.55em !important;
 }
 
 .font-weight-normal {
