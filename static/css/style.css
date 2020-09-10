@@ -2,6 +2,11 @@ html, body {
     margin: 0;
     font-family: Garamond, "Times New Roman", Times, serif;
     overflow-y: scroll;
+    color: #5c5c5c;
+}
+
+.navbar {
+    border: transparent !important;
 }
 
 .navbar-header {
@@ -13,7 +18,6 @@ html, body {
 
 .navbar-brand {
     float: none;
-    /* margin-left: 15px !important;*/
 }
 
 .font-weight-normal {
@@ -28,18 +32,16 @@ html, body {
     padding-bottom: 10px !important;
 }
 
-/* unvisited link */
 a:link {
-    color: #333;
     text-decoration: none !important;
+    color: #5c5c5c;
 }
 
 a:visited {
-    color: rgb(86, 112, 140);
     text-decoration: none !important;
+    color: #5c5c5c;
 }
 
-/* mouse over link */
 a:hover {
     color: rgb(86, 112, 140);
     text-decoration: none !important;
@@ -51,12 +53,12 @@ a:active {
 }
 
 ul.nav li a, ul.nav li a:link {
-    color: #333 !important;
+    color: #5c5c5c !important;
     text-decoration: none !important;
 }
 
 ul.nav li a, ul.nav li a:visited {
-    color: rgb(86, 112, 140) !important;
+    color: #5c5c5c !important;
     text-decoration: none !important;
 }
 
@@ -74,6 +76,6 @@ h1, h2, h3, h4, .navbar-brand {
     font-family: Larsseit, sans-serif;
     font-weight: normal;
     letter-spacing: 0.1em;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
