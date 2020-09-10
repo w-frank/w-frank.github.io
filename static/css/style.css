@@ -1,16 +1,20 @@
 html, body {
     margin: 0;
-    font-family: ubuntu, sans-serif;
+    font-family: Garamond, "Times New Roman", Times, serif;
+    overflow-y: scroll;
 }
 
 .navbar-header {
     float: left;
-    padding: 15px;
+    padding-top: 15px;
     text-align: left;
     width: 100%;
 }
 
-.navbar-brand {float:none;}
+.navbar-brand {
+    float: none;
+    /* margin-left: 15px !important;*/
+}
 
 .font-weight-normal {
     font-weight: normal;
@@ -21,12 +25,12 @@ html, body {
 }
 
 .entry-content {
-    padding-bottom: 10px  !important;
+    padding-bottom: 10px !important;
 }
 
 /* unvisited link */
 a:link {
-    color: rgb(86, 112, 140);
+    color: #333;
     text-decoration: none !important;
 }
 
@@ -64,4 +68,12 @@ ul.nav li a:hover, ul.nav li a:active {
 ul.nav li.active a {
     color: rgb(86, 112, 140) !important;
     text-decoration: none !important;
+}
+
+h1, h2, h3, h4, .navbar-brand {
+    font-family: Larsseit, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
