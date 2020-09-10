@@ -11,7 +11,7 @@ Collectively our gardens are home to a wide range of living creatures and form a
 The way we choose to manage our outdoor spaces can make a big difference to the natural world.
 By growing more wildlife-friendly plants you can attract a wider range of species into your garden, creating a haven for nature.
 
-These plants are some of the best flowers, wildflowers and herbs in our small back garden that wildlife absolutely love...
+These plants are some of the best flowers, wildflowers and herbs in our small back garden that wildlife absolutely love:
 
 1. Foxgloves *(Digitalis)*
 2. Hardy geraniums/cranesbills *(Geranium)*
