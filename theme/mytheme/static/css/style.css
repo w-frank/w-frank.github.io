@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     font-family: Garamond, "Times New Roman", Times, serif;
     overflow-y: scroll;
-    color: #5c5c5c;
+    color: #595959;
 }
 
 .navbar {
@@ -35,12 +35,12 @@ html, body {
 
 a:link {
     text-decoration: none !important;
-    color: #5c5c5c;
+    color: #595959;
 }
 
 a:visited {
     text-decoration: none !important;
-    color: #5c5c5c;
+    color: #595959;
 }
 
 a:hover {
@@ -54,12 +54,12 @@ a:active {
 }
 
 ul.nav li a, ul.nav li a:link {
-    color: #5c5c5c !important;
+    color: #595959 !important;
     text-decoration: none !important;
 }
 
 ul.nav li a, ul.nav li a:visited {
-    color: #5c5c5c !important;
+    color: #595959 !important;
     text-decoration: none !important;
 }
 
