@@ -5,20 +5,30 @@ html, body {
     color: #595959;
 }
 
-.navbar {
+/*.navbar {
     border: transparent !important;
-}
+}*/
 
 .navbar-header {
-    float: left;
+    float: nonr;
     padding-top: 15px;
-    text-align: left;
+    text-align: center;
     width: 100%;
 }
 
 .navbar-brand {
     float: none;
-    letter-spacing: 0.55em !important;
+    letter-spacing: 0.3em !important;
+    font-size: 22px;
+}
+
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+  > li {
+    float: none;
+    display: inline-block;
+  }
 }
 
 .font-weight-normal {
@@ -31,6 +41,10 @@ html, body {
 
 .entry-content {
     padding-bottom: 10px !important;
+}
+
+h3 {
+    font-size: 20px !important;
 }
 
 a:link {
@@ -79,4 +93,17 @@ h1, h2, h3, h4, .navbar-brand {
     letter-spacing: 0.1em;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.item img {
+    height: 450px !important;
+    width: 850px !important;
+}
+
+.blog-footer {
+    margin-top: 20px;
+}
+
+article {
+    margin-bottom: 20px;
 }
