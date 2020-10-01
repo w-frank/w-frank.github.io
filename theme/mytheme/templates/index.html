@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-9">
         {% if articles %}
         {% for article in articles_page.object_list %}
         {# First item #}
@@ -55,7 +55,7 @@
             </section>
         {% endif %}
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <h4 class="font-weight-bold">Recent Posts</h4>
         {% set recent = articles if not all_articles else all_articles %}
         <ul id="recent-posts">

@@ -10,8 +10,16 @@ TIMEZONE = 'Europe/London'
 DEFAULT_DATE_FORMAT = '%-d %B %Y'
 DEFAULT_LANG = 'en'
 
-STATIC_PATHS = ['images', 'extra/CNAME']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, }
+STATIC_PATHS = [
+    'images',
+    'extra/CNAME',
+    'html',
+]
+
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'},
+    'html/projects.html': {'path': 'projects.html'}
+}
 
 # Specify a customized theme, via path relative to the settings file
 THEME = "theme/mytheme"
@@ -35,6 +43,18 @@ SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 5
+
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = True
+
+MENUITEMS = (
+    ('Blog', '/'),
+    #('Projects', '/pages/projects.html'),
+    ('About', '/pages/about.html')
+)
+
+READERS = {'html': None}
+
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
