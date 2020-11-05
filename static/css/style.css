@@ -1,16 +1,22 @@
 html, body {
     margin: 0;
-    font-family: Garamond, "Times New Roman", Times, serif;
+    font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     overflow-y: scroll;
     color: #595959;
 }
 
-/*.navbar {
-    border: transparent !important;
-}*/
+.navbar {
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
 
 .navbar-header {
-    float: nonr;
+    float: left;
     padding-top: 15px;
     text-align: center;
     width: 100%;
@@ -19,16 +25,27 @@ html, body {
 .navbar-brand {
     float: none;
     letter-spacing: 0.3em !important;
-    font-size: 22px;
+    font-size: 30px;
 }
 
 .navbar-nav {
-  width: 100%;
-  text-align: center;
-  > li {
     float: none;
-    display: inline-block;
-  }
+    font-size: 16px;
+}
+
+/*@media (min-width: 768px) {*/
+    .navbar-nav {
+        float: none;
+        position: absolute;
+        top: 125%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+    }
+/*}*/
+
+.navbar-nav>li {
+  display: inline-block;
 }
 
 .font-weight-normal {
@@ -88,9 +105,8 @@ ul.nav li.active a {
 }
 
 h1, h2, h3, h4, .navbar-brand {
-    font-family: Larsseit, sans-serif;
+    font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
     font-weight: normal;
-    letter-spacing: 0.1em;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -106,4 +122,8 @@ h1, h2, h3, h4, .navbar-brand {
 
 article {
     margin-bottom: 20px;
+}
+
+.col-md-8 {
+    margin-right: 5%;
 }
