@@ -9,7 +9,7 @@
         <label class="font-weight-normal text-muted">Published: {{ article.date.strftime("%-d %B, %Y")}}</label>
         <p>{{ article.content }}</p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <h4 class="font-weight-bold">Recent Posts</h4>
         {% set recent = articles if not all_articles else all_articles %}
         <ul id="recent-posts">

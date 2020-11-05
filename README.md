@@ -3,9 +3,10 @@
 My personal site built with [Pelican](http://getpelican.com) and [GitHub Pages](https://pages.github.com).
 
 ## Development
-To preview the site during development run the following commands
+To preview the site during development:
 ```shell
 pelican /path/to/your/content/
+pelican content
 cd output
 python -m http.server
 ```
