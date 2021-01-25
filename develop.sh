@@ -1,4 +1,6 @@
+#!/bin/sh
+
 pelican -s pelicanconf.py -o output content
 cd output
-python -m http.server
+python3 -m http.server
 cd ..

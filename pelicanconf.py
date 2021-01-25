@@ -13,7 +13,6 @@ DEFAULT_LANG = 'en'
 STATIC_PATHS = [
     'images',
     'extra/CNAME',
-    'html',
 ]
 
 EXTRA_PATH_METADATA = {
