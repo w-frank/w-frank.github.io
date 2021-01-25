@@ -1,6 +1,6 @@
 # Personal Site
 
-My personal site built with [Pelican](http://getpelican.com) and [GitHub Pages](https://pages.github.com).
+My [personal site](https://willfrank.co.uk) built with [Pelican](http://getpelican.com) and [GitHub Pages](https://pages.github.com).
 
 ## Development
 To preview the site during development:
