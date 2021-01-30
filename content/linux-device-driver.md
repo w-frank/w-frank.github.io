@@ -1,14 +1,14 @@
-Title: How to Write a Linux Device Driver
+Title: How to Write a Linux Kernel Module
 Date: 2021-01-25 11:42
 Modified: 2021-01-25 11:42
 Category: Linux
 Tags: linux, programming, electronics
-Slug: linux-device-drivers
+Slug: linux-kernel-moduled-1
 Authors: Will Frank
 Summary: The Hello World of Linux Device Driver Programming
 
 ## Introduction
-What exactly is a Linux kernel module? Modules are peices of code that can be 
+What exactly is a Linux kernel module? Modules are pieces of code that can be 
 dynamically loaded and unloaded into the kernel on demand. They extend the 
 functionality of the kernel without the need to reboot the system. For example,
 one type of module is the device driver, which allow kernel access to hardware
@@ -18,9 +18,9 @@ lead to larger kernels, but it also has the disadvantage that the kernel must be
 rebuilt and restarted every time we want to add new functionality.
 
 ## Requirements
-In order to compile kernel modules you must have the kernel source installed or
-at least the required parts of it. These should always be found under
-`/lib/modules/$(uname -r)/build`.
+In order to compile kernel modules you must have the kernel source installed on
+your system or at least the required parts of it. These should always be found 
+under `/lib/modules/$(uname -r)/build`.
 
 To install them (as root):
 ```
@@ -43,13 +43,13 @@ MODULE_LICENSE ("GPL v3.0");
 
 static int __init hello_world_init (void)
 {
-    printk (KERN_INFO "Hello world: module loaded at 0x%p\n", my_init);
+    printk (KERN_INFO "Hello world: module loaded at 0x%p\n", hello_world_init);
     return 0;
 }
 
 static void __exit hello_world_exit (void)
 {
-    printk (KERN_INFO "Bye world: module unloaded from 0x%p\n", my_exit);
+    printk (KERN_INFO "Bye world: module unloaded from 0x%p\n", hello_world_exit);
 }
 
 module_init (hello_world_init);

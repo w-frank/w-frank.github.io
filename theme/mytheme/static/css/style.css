@@ -7,7 +7,7 @@ html, body {
 
 .navbar {
     margin-top: 15px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 
 .navbar-default {
@@ -25,7 +25,7 @@ html, body {
 .navbar-brand {
     float: none;
     letter-spacing: 0.3em !important;
-    font-size: 40px;
+    font-size: 38px;
 }
 
 .navbar-nav {
@@ -128,4 +128,8 @@ article {
 
 .col-md-8 {
     margin-right: 5%;
+}
+
+.page {
+    margin-top: 100px;
 }
