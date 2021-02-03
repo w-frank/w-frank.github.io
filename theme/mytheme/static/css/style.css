@@ -63,11 +63,19 @@ html, body {
 }
 
 h1 {
-    font-size: 32px !important;
+    font-size: 30px !important;
+}
+
+h2 {
+    font-size: 26px !important;
 }
 
 h3 {
     font-size: 20px !important;
+}
+
+p {
+    font-size: 16px !important;
 }
 
 a:link {
@@ -86,7 +94,7 @@ a:hover {
 }
 
 a:active {
-    color: rgb(86, 112, 140);*/
+    color: rgb(86, 112, 140);
     text-decoration: none !important;
 }
 
