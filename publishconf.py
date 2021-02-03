@@ -37,6 +37,9 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 
 CATEGORIES = (('blog'), ('test'))
 
+# Disqus Comments
+DISQUS_SITENAME = 'willfrank-co-uk'
+
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
