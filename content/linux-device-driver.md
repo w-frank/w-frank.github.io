@@ -5,7 +5,7 @@ Category: Linux
 Tags: linux, programming, electronics
 Slug: linux-kernel-moduled-1
 Authors: Will Frank
-Summary: The Hello World of Linux Device Driver Programming.
+Summary: The "Hello World" of Linux Device Driver Programming.
 
 ## Introduction
 What exactly is a Linux kernel module? Modules are pieces of code that can be 
