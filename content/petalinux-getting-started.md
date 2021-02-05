@@ -5,8 +5,7 @@ Category: Linux
 Tags: linux, programming, electronics, zynq
 Slug: petalinux-1
 Authors: Will Frank
-Summary: How to get up and running with PetaLinux, the embedded Linux development
-tool-chain for Xilinx processing systems.
+Summary: How to get up and running with PetaLinux, the embedded Linux development tool-chain for Xilinx processing systems.
 
 PetaLinux is an embedded Linux development tool-chain for Xilinx processing systems. 
 This includes Versal, Zynq UltraScale+ MPSoC, Zynq-7000 SoCs, and MicroBlaze.
