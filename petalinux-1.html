@@ -65,7 +65,7 @@ change directory (cd) into the directory the installer was downloaded into
 (most likely Downloads). Before running the PetaLinux installer, you will need 
 to change the default user permissions on the PetaLinux installer file. The
 following is adequate:</p>
-<div class="highlight"><pre><span></span><code>sudo chmod <span class="m">755</span> petalinux-v2019.2-final-installer.run
+<div class="highlight"><pre><span></span><code>sudo chmod <span class="m">755</span> petalinux-v2020.2-final-installer.run
 </code></pre></div>
 
 <p>Using 755 you are specifying the following permissions:</p>
@@ -102,12 +102,12 @@ directories are and so your specific file paths may be different.</p>
 <p>After adding the line, save and close the editor.</p>
 <h2>Create New Project</h2>
 <p>The petalinux-create command is used to create a new PetaLinux project:</p>
-<div class="highlight"><pre><span></span><code>petalinux-create -type project --template &lt;CPU_TYPE&gt; --name &lt;PROJECT_NAME&gt;
+<div class="highlight"><pre><span></span><code>petalinux-create --type project --template &lt;CPU_TYPE&gt; --name &lt;PROJECT_NAME&gt;
 </code></pre></div>
 
 <p>The parameters are as follows:
-* --template <CPU_TYPE> - the supported CPU types are zynqMP, zynq and microblaze
-* --name <PROJECT_NAME> - the name of the project you are building</p>
+--template <CPU_TYPE> - the supported CPU types are zynqMP, zynq and microblaze
+--name <PROJECT_NAME> - the name of the project you are building</p>
 <p>This command will create a new PetaLinux project folder from a default template.
 Later steps customise these settings to match the hardware (FPGA) project.</p>
 <h2>Create a Project - Board Support Package</h2>
@@ -178,8 +178,7 @@ with the following command:</p>
 
 <p>Once the root file system and boot files have been copied to the two partitions
 of your SD card, you can now unmount and eject your SD card and load it into 
-your board.</p>
-<p>Custom kernel modules are in /lib/modules/4.0.0-xilinx/extra.</p></p>
+your board.</p></p>
         <h2>Comments</h2>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
