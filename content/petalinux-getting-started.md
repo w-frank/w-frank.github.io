@@ -54,7 +54,7 @@ to change the default user permissions on the PetaLinux installer file. The
 following is adequate:
 
 ```shell
-sudo chmod 755 petalinux-v2019.2-final-installer.run
+sudo chmod 755 petalinux-v2020.2-final-installer.run
 ```
 
 Using 755 you are specifying the following permissions:
@@ -96,11 +96,11 @@ After adding the line, save and close the editor.
 ## Create New Project
 The petalinux-create command is used to create a new PetaLinux project:
 ```shell
-petalinux-create -type project --template <CPU_TYPE> --name <PROJECT_NAME>
+petalinux-create --type project --template <CPU_TYPE> --name <PROJECT_NAME>
 ```
 The parameters are as follows:
-* --template <CPU_TYPE> - the supported CPU types are zynqMP, zynq and microblaze
-* --name <PROJECT_NAME> - the name of the project you are building
+--template <CPU_TYPE> - the supported CPU types are zynqMP, zynq and microblaze
+--name <PROJECT_NAME> - the name of the project you are building
 
 This command will create a new PetaLinux project folder from a default template.
 Later steps customise these settings to match the hardware (FPGA) project.
@@ -179,5 +179,3 @@ cp images/linux/rootfc.cpio /media/will/rootfs
 Once the root file system and boot files have been copied to the two partitions
 of your SD card, you can now unmount and eject your SD card and load it into 
 your board.
-
-Custom kernel modules are in /lib/modules/4.0.0-xilinx/extra.
