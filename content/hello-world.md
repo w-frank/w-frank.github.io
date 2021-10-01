@@ -9,3 +9,5 @@ Summary:
 
 # Hello world
 Hello world!
+
+[![my_image](/images/stereo.png){:width=600px}](/images/stereo.png "Title that is displayed on mouse-over and as caption in colorbox"){class="mybox"}
