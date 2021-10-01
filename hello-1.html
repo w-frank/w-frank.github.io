@@ -7,6 +7,7 @@
         <meta name="author" content="Will Frank">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="/static/css/colorbox.css" rel="stylesheet">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link href="/static/css/style.css" rel="stylesheet">
     </head>
@@ -28,7 +29,8 @@
         <h1 class="font-weight-bold"><a href="/hello-1.html">Hello World</a></h1>
         <label class="font-weight-normal text-muted">1 October, 2021</label>
         <p><h1>Hello world</h1>
-<p>Hello world!</p></p>
+<p>Hello world!</p>
+<p><a class="mybox" href="/images/stereo.png" title="Title that is displayed on mouse-over and as caption in colorbox"><img alt="my_image" src="/images/stereo.png" width="600px"></a></p></p>
         <h2>Comments</h2>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -63,5 +65,11 @@
                 <span class="text-muted">Will Frank 2021. Handcrafted using <a href="https://www.python.org/">Python</a>, <a href="https://docs.getpelican.com/en/stable/">Pelican</a> and <a href="https://getbootstrap.com/">Bootstrap</a>. Published with <a href="https://pages.github.com/">GitHub Pages.</a></span>
             </container>
         </footer>
+
+        <script src="/static/js/jquery.min.js"></script>
+        <!-- Make sure jquery is loaded first, then load colorbox -->
+        <script src="/static/js/jquery.colorbox-min.js"></script>
+        <script src="/static/js/load-colorbox.js"></script>
+
     </body>
 </html>
