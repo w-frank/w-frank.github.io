@@ -21,7 +21,7 @@ EXTRA_PATH_METADATA = {
 }
 
 # Specify a customized theme, via path relative to the settings file
-THEME = "theme/mytheme"
+THEME = "theme/minimalist"
 THEME_STATIC_DIR = 'static'
 
 LOAD_CONTENT_CACHE = False

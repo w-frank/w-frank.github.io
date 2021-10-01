@@ -22,7 +22,7 @@ EXTRA_PATH_METADATA = {
 }
 
 # Specify a customized theme, via path relative to the settings file
-THEME = "theme/mytheme"
+THEME = "theme/minimalist"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
