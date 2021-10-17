@@ -5,14 +5,14 @@
 {% block content %}
 <div class="row">
     <div class="col-md-8">
-        <h1 class="font-weight-bold"><a href="/{{ article.slug }}.html">{{ article.title }}</a></h1>
+        <h1><a href="/{{ article.slug }}.html">{{ article.title }}</a></h1>
         <label class="font-weight-normal text-muted">{{ article.date.strftime("%-d %B, %Y")}}</label>
         <p>{{ article.content }}</p>
         <h2>Comments</h2>
         {% include 'disqus.html' %}
     </div>
     <div class="col-md-3">
-        <h4 class="font-weight-bold">Recent Posts</h4>
+        <h4>Recent Posts</h4>
         {% set recent = articles if not all_articles else all_articles %}
         <ul id="recent-posts">
             {% for a in recent %}
@@ -21,13 +21,13 @@
             {% endif %}
             {% endfor %}
         </ul>
-        <h4 class="font-weight-bold">Categories</h4>
+        <h4>Categories</h4>
         <ul id="category-list">
             {% for category, articles in categories %}
             <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
             {% endfor %}
         </ul>
-        <h4 class="font-weight-bold">Tags</h4>
+        <h4>Tags</h4>
         <ul id="tag-list">
             {% for tag, articles in tags %}
             <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
