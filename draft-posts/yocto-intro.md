@@ -1,4 +1,4 @@
-Title: How to Create your own Linux custom distribution using Yocto
+Title: How to Create your own custom Linux distribution using Yocto
 Date: 2021-02-06 06:10
 Modified: 2021-02-06 06:10
 Category: Linux
