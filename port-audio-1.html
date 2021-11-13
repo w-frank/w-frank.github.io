@@ -26,9 +26,15 @@
             </nav>
 <div class="row">
     <div class="col-md-8">
-        <h1><a href="/port-audio-1.html">Installing and Using PortAudio on Linux (using CMake)</a></h1>
+        <h1><a href="/port-audio-1.html">Build and Use PortAudio on Linux (using CMake)</a></h1>
         <label class="font-weight-normal text-muted">13 November, 2021</label>
-        <p><h2>Installing the ALSA Development Kit</h2>
+        <p><h2>PortAudio - portable audio I/O library</h2>
+<p>PortAudio is a portable audio I/O library designed for cross-platform support of
+audio. It uses either a callback mechanism to request audio processing, or
+blocking read/write calls to buffer data between the native audio subsystem and
+the client. Audio can be processed in various formats, including 32 bit floating
+point, and will be converted to the native format internally.</p>
+<h2>Installing the ALSA Development Kit</h2>
 <p>The OSS sound API is very old and not well supported. It is recommended that you
 use the ALSA sound API. The PortAudio configure script will look for the ALSA
 SDK. You can install the ALSA SDK on Ubuntu using:</p>
@@ -39,18 +45,21 @@ SDK. You can install the ALSA SDK on Ubuntu using:</p>
 your machine.</p>
 <p>If you do not install ALSA then you might get a message when testing that says
 you have no audio devices.</p>
-<p>You can find out more about ALSA here: [http://www.alsa-project.org/]</p>
+<p>You can find out more about ALSA here: <a href="http://www.alsa-project.org/">http://www.alsa-project.org/</a></p>
 <h2>Installing PortAudio</h2>
 <ol>
 <li>Get the latest stable release of PortAudio from <a href="http://files.portaudio.com/download.html">here</a>.
 At the time of writing this is v19.7.0.</li>
 <li>Extract the tarball <code>tar -xvzf pa_stable_v190700_20210406.tgz</code> to your
-   preferred location. I put it in <code>/opt/portaudio/</code>.
-   Alternatively, get the latest development version from GitHub:
-   <code>shell
-   git clone https://github.com/PortAudio/portaudio.git</code></li>
+preferred location. I put it in <code>/opt/portaudio/</code>.
+Alternatively, get the latest development version from GitHub:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/PortAudio/portaudio.git
+</code></pre></div>
+
+<ol>
 <li>PortAudio can be built and installed with CMake. You should obtain a recent 
-version of CMake from [http://www.cmake.org] if you do not have one already.</li>
+version of CMake from <a href="http://www.cmake.org">http://www.cmake.org</a> if you do not have one already.</li>
 </ol>
 <div class="highlight"><pre><span></span><code>cmake <span class="o">{</span>portaudio path<span class="o">}</span> -G <span class="s2">&quot;Unix Makefiles&quot;</span> -DCMAKE_INSTALL_PREFIX<span class="o">=</span>/install_location
 make
@@ -64,11 +73,13 @@ make
 make install
 </code></pre></div>
 
-<p>On my system running Ubuntu 20.04.3 LTS, I installed PortAudio in /usr/local/lib.</p>
+<p>On my system running Ubuntu 20.04.3 LTS, I installed PortAudio in <code>/usr/local/lib/</code>.</p>
 <h2>Building with PortAudio using CMake</h2>
-<p>PortAudio defines the following CMake targets:
-* "portaudio_static" for a static library
-* "portaudio" for a dynamic library</p>
+<p>PortAudio defines the following CMake targets:</p>
+<ul>
+<li><code>portaudio_static</code> for a static library</li>
+<li><code>portaudio</code> for a dynamic library</li>
+</ul>
 <p>To use the CMake package finder you need to tell CMake where to find PortAudio.</p>
 <div class="highlight"><pre><span></span><code>list<span class="o">(</span>APPEND CMAKE_PREFIX_PATH /usr/local/lib/portaudio/<span class="o">)</span>
 </code></pre></div>
@@ -78,7 +89,7 @@ you wish to use them.</p>
 <div class="highlight"><pre><span></span><code>target_include_directories<span class="o">(</span>portaudio_test PRIVATE /opt/portaudio/src/common/<span class="o">)</span>
 </code></pre></div>
 
-<p>A complete example CMakeLists.txt is:</p>
+<p>A complete example <code>CMakeLists.txt</code> is:</p>
 <div class="highlight"><pre><span></span><code>cmake_minimum_required<span class="o">(</span>VERSION <span class="m">2</span>.8<span class="o">)</span>
 
 project<span class="o">(</span>portaudio_test<span class="o">)</span>
@@ -120,7 +131,7 @@ target_link_libraries<span class="o">(</span>portaudio_test portaudio<span class
     <div class="col-md-3">
         <h4>Recent Posts</h4>
         <ul id="recent-posts">
-            <li><a href="/port-audio-1.html">Installing and Using PortAudio on Linux (using CMake)</a></li>
+            <li><a href="/port-audio-1.html">Build and Use PortAudio on Linux (using CMake)</a></li>
         </ul>
         <h4>Categories</h4>
         <ul id="category-list">
