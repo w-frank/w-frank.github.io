@@ -80,7 +80,7 @@ p {
 
 a:link {
     text-decoration: none !important;
-    color: #595959;
+    color: #595959;*/
 }
 
 a:visited {
@@ -89,7 +89,7 @@ a:visited {
 }
 
 a:hover {
-    color: rgb(86, 112, 140);
+    color: #cb4b16;
     text-decoration: none !important;
 }
 
@@ -109,7 +109,7 @@ ul.nav li a, ul.nav li a:visited {
 }
 
 ul.nav li a:hover, ul.nav li a:active {
-    color: rgb(86, 112, 140) !important;
+    color: #cb4b16 !important;
     text-decoration: none !important;
 }
 
