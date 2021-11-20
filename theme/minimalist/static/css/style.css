@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     font-family: 'poppins';
+    font-size: 14px !important;
     overflow-y: scroll;
     color: #333;
 }
@@ -23,6 +24,7 @@ html, body {
 }
 
 .navbar-nav {
+    font-size: 16px !important;
     float: none;
     padding-top: 20px;
     font-size: 40px;
@@ -92,7 +94,7 @@ html, body {
 }
 
 h1 {
-    font-size: 24px !important;
+    font-size: 22px !important;
     color: #333;
     border-bottom: 8px solid rgba(28,232,181,0.6);
     display: table;
@@ -102,7 +104,7 @@ h1 {
 }
 
 h1.navbar-brand {
-    font-size: 34px !important;
+    font-size: 26px !important;
     float: none;
     letter-spacing: 0.3em !important;
     border-bottom: 0px;
@@ -122,7 +124,7 @@ h3 {
 }
 
 p {
-    font-size: 16px !important;
+    font-size: 14px !important;
 }
 
 a:link {
@@ -174,7 +176,6 @@ ul li a:hover {
 h1, h2, h3, h4, .navbar-brand {
     font-family: 'Space Mono';
     color: #333;
-    /*font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;*/
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
