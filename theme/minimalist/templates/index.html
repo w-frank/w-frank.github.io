@@ -13,7 +13,11 @@
                 <header>
                     <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
                         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
-                    <label class="font-weight-normal text-muted">{{ article.date.strftime("%-d %B, %Y")}}</label>
+                    {% for tag in article.tags %}
+                    <label class="tag" href="{{ SITEURL }}/tags/{{tag}}.html">{{ tag }}</label>
+                    {% endfor %}
+                    </label>
+                    <label class="font-weight-normal text-muted">&#8226 {{ article.date.strftime("%-d %B, %Y")}}</label>
                 </header>
 
                 <div class="entry-content">
@@ -72,12 +76,14 @@
             {% endif %}
             {% endfor %}
         </ul>
+        <!--
         <h4>Categories</h4>
         <ul id="category-list">
             {% for category, articles in categories %}
             <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
             {% endfor %}
         </ul>
+        -->
         <h4>Tags</h4>
         <ul id="tag-list">
             {% for tag, articles in tags %}
