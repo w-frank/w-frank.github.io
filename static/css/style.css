@@ -181,6 +181,13 @@ h1, h2, h3, h4, .navbar-brand {
     margin-bottom: 10px;
 }
 
+label.tag {
+    color: #fff;
+    background: rgba(28,232,181,0.6);
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
 .item img {
     height: 450px !important;
     width: 850px !important;
