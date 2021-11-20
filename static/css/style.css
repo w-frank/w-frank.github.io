@@ -1,8 +1,8 @@
 html, body {
     margin: 0;
-    font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    font-family: 'poppins';
     overflow-y: scroll;
-    color: #595959;
+    color: #333;
 }
 
 .navbar {
@@ -22,16 +22,12 @@ html, body {
     width: 100%;
 }
 
-.navbar-brand {
-    float: none;
-    letter-spacing: 0.3em !important;
-    font-size: 34px;
-}
-
 .navbar-nav {
     float: none;
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 40px;
+    text-decoration: none !important;
+    color: #333;
 }
 
 /*@media (min-width: 768px) {*/
@@ -41,13 +37,46 @@ html, body {
         top: 125%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding-top: 20px;
+        padding-top: 40px;
         font-size: 20px;
     }
 /*}*/
 
-.navbar-nav>li {
+.navbar-nav li {
   display: inline-block;
+
+}
+
+.navbar-default .navbar-nav > li > a {
+    padding: .25rem 0.75rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    background:#fff;
+    text-decoration: none;
+    color: #ff5e5b;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    text-decoration: none;
+    color: #fff;
+    background:#ff5e5b;
+    font-weight: bold;
+}
+
+
+.navbar-default .navbar-nav > li.active > a {
+    text-decoration: none;
+    color: #fff;
+    background:#ff5e5b;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li.active > a:hover {
+    text-decoration: none;
+    color: #fff;
+    background:#ff5e5b;
+    font-weight: bold;
 }
 
 .font-weight-normal {
@@ -63,11 +92,29 @@ html, body {
 }
 
 h1 {
-    font-size: 30px !important;
+    font-size: 24px !important;
+    color: #333;
+    border-bottom: 8px solid rgba(28,232,181,0.6);
+    display: table;
+    /*padding-top: .5em;*/
+    margin-bottom: 0.8em;
+    line-height: 1.5;
 }
 
+h1.navbar-brand {
+    font-size: 34px !important;
+    float: none;
+    letter-spacing: 0.3em !important;
+    border-bottom: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    display: inline;
+    /*padding-top: .5em;*/
+}
+
+
 h2 {
-    font-size: 26px !important;
+    font-size: 20px !important;
 }
 
 h3 {
@@ -79,48 +126,56 @@ p {
 }
 
 a:link {
-    text-decoration: none !important;
-    color: #595959;*/
+    color: #ff5e5b;
+    display: inline;
+    border-bottom: 0;
+    text-decoration: underline;
 }
 
 a:visited {
-    text-decoration: none !important;
-    color: #595959;
+    color: #ff5e5b;
+    display: inline;
+    border-bottom: 0;
+    text-decoration: underline;
 }
 
 a:hover {
-    color: #cb4b16;
-    text-decoration: none !important;
+    color: #333;
 }
 
-a:active {
-    color: rgb(86, 112, 140);
+h1 a:link {
     text-decoration: none !important;
+    color: #333;
 }
 
-ul.nav li a, ul.nav li a:link {
-    color: #595959 !important;
+h1 a:visited {
     text-decoration: none !important;
+    color: #333;
 }
 
-ul.nav li a, ul.nav li a:visited {
-    color: #595959 !important;
-    text-decoration: none !important;
+li a:link {
+    color: #ff5e5b;
+    display: inline;
+    border-bottom: 0;
+    text-decoration: underline;
 }
 
-ul.nav li a:hover, ul.nav li a:active {
-    color: #cb4b16 !important;
-    text-decoration: none !important;
+li a:visited {
+    color: #ff5e5b;
+    display: inline;
+    border-bottom: 0;
+    text-decoration: underline;
 }
 
-ul.nav li.active a {
-    color: rgb(86, 112, 140) !important;
-    text-decoration: none !important;
+ul li a:hover {
+    color: #333;
 }
 
 h1, h2, h3, h4, .navbar-brand {
-    font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
-    font-weight: normal;
+    font-family: 'Space Mono';
+    color: #333;
+    /*font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;*/
+    font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
 }
