@@ -1,0 +1,18 @@
+/* Title fonts */
+Space Mono
+Bembo
+EB Garomond
+
+/* Content fonts */
+Poppins
+Gill Sans
+
+/* Colour palette */
+colour_palette {
+    color: #333; /* Dark grey */
+    color: #777; /* Light grey */
+    color: #ff5e5b; /* Light red */
+    color: rgba(28,232,181,0.6); /* Light green */
+}
+
+
