@@ -51,6 +51,7 @@ DISPLAY_CATEGORIES_ON_MENU = True
 
 MENUITEMS = (
     ('Home', '/'),
+    ('Portfolio', '/pages/portfolio.html'),
     #('Projects', '/pages/projects.html'),
     ('About', '/pages/about.html')
 )
