@@ -1,11 +1,11 @@
-Title: Sending Files with Kermit
+Title: Sending Files Over Serial With Kermit
 Date: 2021-12-09 09:08
 Modified: 2021-12-09 09:08
 Category: Linux
 Tags: linux, programming
 Slug: sending-files-with-kermit-1
 Authors: Will Frank
-Summary:
+Summary: A step by step guide to sending files to a remote machine over serial with Kermit and Tera Term.
 
 ## Introduction
 I recently needed to send a binary FPGA image file from a Windows PC to a device
