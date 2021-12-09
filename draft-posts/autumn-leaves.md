@@ -1,0 +1,7 @@
+Why do some trees lose their leaves in Autumn?
+
+In autumn in deciduous trees (beech, birch, ash, oak, ...) the sap retreats and the leaves change colour and start to fall. In fact, the name deciduous comes from Latin for 'that which falls down'. This is a survival mechanism for the trees through the harsh conditions of winter, allowing them to conserve precious energy, retain water, and reduce the impact of dry, strong gales.
+
+When trees detect a drop in light levels, as summer turns to autumn, they reduce their chlorophyll production. Chlorophyll is the chemical in leaves responsible for photosynthesis (food production) that also gives leaves their distinct green hue as it reflects green light. Once cholorphyll production stops, the chlorophyll gets broken down and returned back to the tree. The reduction in chlorophyll reveals other chemical pigments (xanthophylls, carotenoids, anthocyanins) that have always been present in the leaf but have been masked by the chlorophyll. These pigments give the autumn leaves their distinct and beautiful shade of reds, oranges and yellows.
+
+The trees physically shed their leaves by growing a layer of cells between the leaf stem and the tree branch known as an abscission layer. The growth of this layer, triggered by hormones, blocks the transport of nutrients and water to the leaf and eventually the leaf dies and falls from the tree.
