@@ -4,7 +4,8 @@ Modified: 22022-02-13 20:07
 Category: STM32
 Tags: STM32, ARM, linux, programming
 Slug: stm32-led
-Authors: The Hello World! of STM32 embedded programming.
+Authors: Will Frank
+Summary: The Hello World of STM32 embedded programming!
 
 1. Open STM32CubeMX and start a new STM32 project.
 2. I'm using the STM32 Discovery board which has an STM32F407VG microcontroller
