@@ -61,15 +61,15 @@ changed by opening the <code>STM32F407VGTX_FLASH.ld</code> linker script file an
 the line 59 to <code>_Min_Heap_Size = 0x600;</code>.</p>
 <p>Lets test this setup with a simple echo application using the USB CDC. First
 open the <code>usbd_cdc_if.c</code> file. Find the CDC_Receive_FS function and edit:</p>
-<div class="highlight"><pre><span></span><code><span class="k">static</span> <span class="kt">int8_t</span> <span class="nf">CDC_Receive_FS</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span> <span class="n">Buf</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="o">*</span><span class="n">Len</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="cm">/* USER CODE BEGIN 6 */</span>
-    <span class="n">USBD_CDC_SetRxBuffer</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hUsbDeviceFS</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">Buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
-    <span class="n">USBD_CDC_ReceivePacket</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hUsbDeviceFS</span><span class="p">);</span>
-    <span class="n">CDC_Transmit_FS</span><span class="p">(</span><span class="n">Buf</span><span class="p">,</span><span class="o">*</span><span class="n">Len</span><span class="p">);</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">USBD_OK</span><span class="p">);</span>
-    <span class="cm">/* USER CODE END 6 */</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kt">int8_t</span><span class="w"> </span><span class="nf">CDC_Receive_FS</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">Buf</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">Len</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* USER CODE BEGIN 6 */</span><span class="w"></span>
+<span class="w">    </span><span class="n">USBD_CDC_SetRxBuffer</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hUsbDeviceFS</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">USBD_CDC_ReceivePacket</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hUsbDeviceFS</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">CDC_Transmit_FS</span><span class="p">(</span><span class="n">Buf</span><span class="p">,</span><span class="o">*</span><span class="n">Len</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">USBD_OK</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* USER CODE END 6 */</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 
 <p>Now build the project and download the program to the board using the built in
