@@ -1,6 +1,6 @@
 Title: STM32: Blink an LED
 Date: 2022-02-13 20:07
-Modified: 22022-02-13 20:07
+Modified: 2022-02-13 20:07
 Category: STM32
 Tags: STM32, ARM, linux, programming
 Slug: stm32-led
