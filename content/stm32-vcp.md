@@ -5,8 +5,7 @@ Category: STM32
 Tags: STM32, ARM, linux, programming
 Slug: stm32-vcp
 Authors: Will Frank
-Summary: How to configure the USB peripheral of STM32 microcontrollers as a \
-virtual COM port.
+Summary: How to configure the USB peripheral of STM32 microcontrollers as a virtual COM port.
 
 Serial communication is useful for interfacing microcontrollers with external
 devices or to a host PC for debugging or data transfer. For STM32
