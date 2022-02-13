@@ -2,7 +2,7 @@ Title: Build and Use PortAudio on Linux (using CMake)
 Date: 2021-11-13 08:26
 Modified: 2021-11-13 08:26
 Category: Linux
-Tags: linux, programming
+Tags: audio, linux, programming
 Slug: port-audio-1
 Authors: Will Frank
 Summary: How to install, build, and use the PortAudio library on Linux.

@@ -71,7 +71,7 @@ turned on and off using the VCP. First, open the CubeMX (.ioc ) file again to
 generate the code for the LED. In the CubeMX perspective, select the pin for the
 LED (which is PD13 for the orange LED of the STMF4 Discovery board) and set as
 GPIO_Output. Now save the file to generate the code again. Next change the
-CDC_Receive_FS function in the usbd_cdc_if file as follows:
+CDC_Receive_FS function in the usbd_cdc_if.c file as follows:
 ```shell
 static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
 {
