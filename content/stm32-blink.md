@@ -21,6 +21,7 @@ the HAL libraries.Select STM32F4-DISC1 from the board selector.
 
 For this tutorial we'll use the green LED. In the MCU pinout viewer, set PD12
 to GPIO_Output. Save and generate the code.
+
 4. In the code editor, add the following to the main function in ```main.c```:
 ```C
 /* Infinite loop */
@@ -36,5 +37,6 @@ while (1)
 }
 /* USER CODE END 3 */
 ```
+
 5. Build the program and download it to the board. You should see the green LED
 flashing every 1 second.
