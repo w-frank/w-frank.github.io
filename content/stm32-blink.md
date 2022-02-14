@@ -12,12 +12,13 @@ Summary: The Hello World of STM32 embedded programming!
 and 4 onboard LEDs. For this project, I'm using the STM32 Cube Framework with
 the HAL libraries.Select STM32F4-DISC1 from the board selector.
 3. The STM32F4 Discovery board has the following LEDs available to the user:
-| LED    | NAME | PIN  |
-| ------ | ---- | ---- |
-| Green  | LD4  | PD12 |
-| Orange | LD3  | PD13 |
-| Red    | LD5  | PD14 |
-| Blue   | LD6  | PD15 |
+
+| LED     | NAME  | PIN  |
+| ------  | ----  | ---- |
+| Green   | LD4   | PD12 |
+| Orange  | LD3   | PD13 |
+| Red     | LD5   | PD14 |
+| Blue    | LD6   | PD15 |
 
 For this tutorial we'll use the green LED. In the MCU pinout viewer, set PD12
 to GPIO_Output. Save and generate the code.

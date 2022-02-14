@@ -58,10 +58,16 @@ MENUITEMS = (
 
 READERS = {'html': None}
 
-MARKDOWN = {
-    'extension_configs': {
-        'markdown.extensions.tables':{},
-    }
-}
+#MARKDOWN = {
+#    'extension_configs': {
+#        'markdown.extensions.tables':{},
+#}
+#    }
+
+#from markdown.extensions.tables import TableExtension
+#MARKDOWN = {
+#    "extensions": [TableExtension()]    
+#}
+
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
