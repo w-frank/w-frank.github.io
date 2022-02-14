@@ -46,10 +46,11 @@ point, and will be converted to the native format internally.</p>
 <h2>Installing the ALSA Development Kit</h2>
 <p>The OSS sound API is very old and not well supported. It is recommended that you
 use the ALSA sound API. The PortAudio configure script will look for the ALSA
-SDK. You can install the ALSA SDK on Ubuntu using:
-<code>shell
-sudo apt-get install libasound-dev</code>
-You might need to use yum, or some other package manager, instead of apt-get on
+SDK. You can install the ALSA SDK on Ubuntu using:</p>
+<div class="highlight"><pre><span></span><code>sudo apt-get install libasound-dev
+</code></pre></div>
+
+<p>You might need to use yum, or some other package manager, instead of apt-get on
 your machine.</p>
 <p>If you do not install ALSA then you might get a message when testing that says
 you have no audio devices.</p>
@@ -60,51 +61,63 @@ you have no audio devices.</p>
 At the time of writing this is v19.7.0.</li>
 <li>Extract the tarball <code>tar -xvzf pa_stable_v190700_20210406.tgz</code> to your
 preferred location. I put it in <code>/opt/portaudio/</code>.
-Alternatively, get the latest development version from GitHub:
-<code>shell
-git clone https://github.com/PortAudio/portaudio.git</code></li>
-<li>PortAudio can be built and installed with CMake. You should obtain a recent 
-version of CMake from <a href="http://www.cmake.org">http://www.cmake.org</a> if you do not have one already.
-<code>shell
-cmake {portaudio path} -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/install_location
-make
-make install</code>
-Alternatively, standard GNU autotools configure/make can be used to build
-PortAudio in Linux environments.
-<code>shell
-{portaudio path}/configure --prefix=/install_location
-make
-make install</code>
-On my system running Ubuntu 20.04.3 LTS, I installed PortAudio in <code>/usr/local/lib/</code>.</li>
+Alternatively, get the latest development version from GitHub:</li>
 </ol>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/PortAudio/portaudio.git
+</code></pre></div>
+
+<ol>
+<li>PortAudio can be built and installed with CMake. You should obtain a recent 
+version of CMake from <a href="http://www.cmake.org">http://www.cmake.org</a> if you do not have one already.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>cmake <span class="o">{</span>portaudio path<span class="o">}</span> -G <span class="s2">&quot;Unix Makefiles&quot;</span> -DCMAKE_INSTALL_PREFIX<span class="o">=</span>/install_location
+make
+make install
+</code></pre></div>
+
+<p>Alternatively, standard GNU autotools configure/make can be used to build
+PortAudio in Linux environments.</p>
+<div class="highlight"><pre><span></span><code><span class="o">{</span>portaudio path<span class="o">}</span>/configure --prefix<span class="o">=</span>/install_location
+make
+make install
+</code></pre></div>
+
+<p>On my system running Ubuntu 20.04.3 LTS, I installed PortAudio in <code>/usr/local/lib/</code>.</p>
 <h2>Building with PortAudio using CMake</h2>
 <p>PortAudio defines the following CMake targets:</p>
 <ul>
 <li><code>portaudio_static</code> for a static library</li>
 <li><code>portaudio</code> for a dynamic library</li>
 </ul>
-<p>To use the CMake package finder you need to tell CMake where to find PortAudio.
-<code>shell
-list(APPEND CMAKE_PREFIX_PATH /usr/local/lib/portaudio/)</code>
-then you may need to include some of the platform independent code headers if
-you wish to use them.
-<code>shell
-target_include_directories(portaudio_test PRIVATE /opt/portaudio/src/common/)</code></p>
-<p>A complete example <code>CMakeLists.txt</code> is:
-```shell
-cmake_minimum_required(VERSION 2.8)</p>
-<p>project(portaudio_test)</p>
-<h1>Set the build directory</h1>
-<p>set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/bin)
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
-set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})</p>
-<p>include_directories("${PROJECT_SOURCE_DIR}")</p>
-<p>list(APPEND CMAKE_PREFIX_PATH /usr/local/lib/portaudio/)
-find_package( portaudio REQUIRED )</p>
-<p>add_executable(portaudio_test ${PROJECT_SOURCE_DIR}/portaudio_test.cpp)
-target_include_directories(portaudio_test PRIVATE /opt/portaudio/src/common/)
-target_link_libraries(portaudio_test portaudio)
-```</p>
+<p>To use the CMake package finder you need to tell CMake where to find PortAudio.</p>
+<div class="highlight"><pre><span></span><code>list<span class="o">(</span>APPEND CMAKE_PREFIX_PATH /usr/local/lib/portaudio/<span class="o">)</span>
+</code></pre></div>
+
+<p>then you may need to include some of the platform independent code headers if
+you wish to use them.</p>
+<div class="highlight"><pre><span></span><code>target_include_directories<span class="o">(</span>portaudio_test PRIVATE /opt/portaudio/src/common/<span class="o">)</span>
+</code></pre></div>
+
+<p>A complete example <code>CMakeLists.txt</code> is:</p>
+<div class="highlight"><pre><span></span><code>cmake_minimum_required<span class="o">(</span>VERSION <span class="m">2</span>.8<span class="o">)</span>
+
+project<span class="o">(</span>portaudio_test<span class="o">)</span>
+
+<span class="c1"># Set the build directory</span>
+set<span class="o">(</span>CMAKE_BINARY_DIR <span class="si">${</span><span class="nv">CMAKE_SOURCE_DIR</span><span class="si">}</span>/bin<span class="o">)</span>
+set<span class="o">(</span>EXECUTABLE_OUTPUT_PATH <span class="si">${</span><span class="nv">CMAKE_BINARY_DIR</span><span class="si">}</span><span class="o">)</span>
+set<span class="o">(</span>LIBRARY_OUTPUT_PATH <span class="si">${</span><span class="nv">CMAKE_BINARY_DIR</span><span class="si">}</span><span class="o">)</span>
+
+include_directories<span class="o">(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">)</span>
+
+list<span class="o">(</span>APPEND CMAKE_PREFIX_PATH /usr/local/lib/portaudio/<span class="o">)</span>
+find_package<span class="o">(</span> portaudio REQUIRED <span class="o">)</span>
+
+add_executable<span class="o">(</span>portaudio_test <span class="si">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="si">}</span>/portaudio_test.cpp<span class="o">)</span>
+target_include_directories<span class="o">(</span>portaudio_test PRIVATE /opt/portaudio/src/common/<span class="o">)</span>
+target_link_libraries<span class="o">(</span>portaudio_test portaudio<span class="o">)</span>
+</code></pre></div>
+
 <h2>References</h2>
 <ul>
 <li><a href="http://files.portaudio.com/">PortAudio</a></li>
