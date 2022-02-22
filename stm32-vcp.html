@@ -39,18 +39,19 @@
         </label>
         <label class="font-weight-normal text-muted">&#8226 13 February, 2022</label>
         <p><p>Serial communication is really useful for interfacing microcontrollers with
-external devices (GPS, WiFi modules) or to a host PC for debugging or data
-transfer. For STM32 devices a USB-UART bridge can be used to communicate with a
-USB device such as a PC. However, many of the STM32 development boards have a
-USB peripheral on-board. This tutorial covers setting up the STM32F4 Discovery
-board as a virtual COM port (VCP) to enable USB communication from a PC.</p>
+external devices (GPS, WiFi, Bluetooth modules) or to a host PC for debugging or
+data transfer. For STM32 devices a USB-UART bridge can be used to communicate
+with a USB device such as a PC. However, many of the STM32 development boards
+have a USB peripheral on-board. This tutorial covers setting up the STM32F4
+Discovery board as a virtual COM port (VCP) to enable USB communication to and
+from a PC.</p>
 <p>I'm using the STM32 Discovery board which has an STM32F407VG microcontroller and
 an on-board micro USB port. I'm using the STM32 Cube Framework with the HAL
 libraries and USB device middleware for this application. I'm developing on a PC
 running Ubuntu 20.04.3.</p>
-<p>Open STM32 CubeIDE and start a new STM32 project (File &gt; New &gt; STM32 Project).
-Select your microcontroller or development board. Here I select the
-STM32F4 Discovery (STM32F407G-DISC1).</p>
+<p>First, open STM32CubeIDE and start a new STM32 project
+<strong>File &gt; New &gt; STM32 Project</strong>. Select your microcontroller or development board.
+Here I select the STM32F4 Discovery (STM32F407G-DISC1).</p>
 <p><img alt="img-full-width" src="./images/stm32-vcp/board-select.png"></p>
 <p>Click <strong>Next &gt;</strong>, name your project (e.g. "usb_vsp_test") and leave the rest as
 default. We'll be using C as our programming language in this example. Click
@@ -71,18 +72,18 @@ Discovery pins PA11 and PA12 are configured for OTG_FS_DM and OTG_FS_DP.</p>
 <p><img alt="img-full-width" src="./images/stm32-vcp/usb-otg-fs.png"></p>
 <p>Finally, under the <strong>Middleware</strong> section, select the <strong>USB_DEVICE</strong> and set the
 <strong>Class For FS IP</strong> as <strong>Communication Device Class (Virtual Port Com)</strong>. Leave
-the <strong>Configuration &gt; Paramter Settings</strong> as default.</p>
+the <strong>Configuration &gt; Parameter Settings</strong> as default.</p>
 <p><img alt="img-full-width" src="./images/stm32-vcp/usb-device.png"></p>
 <p>Next, save the CubeMX (.ioc) file to generate the code. Click <strong>File &gt; Save</strong> to
 save the changes to the CubeMX configuration. You’ll be asked if you want to
-generate Code. Click <strong>Yes</strong>.</p>
+generate code. Click <strong>Yes</strong>.</p>
 <p>Now all the peripherals are enabled for the USB communication over VCP. But as
 the HAL USB stack is heavy on the memory, the minimum heap size needed has to be
 changed. This can be changed by opening the <strong>Project Manager</strong> tab and changing
 the <strong>Minimum Heap Size</strong> to <code>0x600</code> under <strong>Linker Settings</strong>.</p>
 <p><img alt="img-full-width" src="./images/stm32-vcp/heap-size.png"></p>
 <p>Click <strong>File &gt; Save</strong> to save the changes to the CubeMX configuration. You’ll be
-asked if you want to generate Code. Click <strong>Yes</strong>.</p>
+asked again if you want to generate code. Click <strong>Yes</strong>.</p>
 <h2>Serial Echo</h2>
 <p>Lets test this setup with a simple echo application using the USB CDC. First
 open the <code>USB_DEVICE &gt; App &gt; usbd_cdc_if.c</code> file. Find the
@@ -98,20 +99,21 @@ open the <code>USB_DEVICE &gt; App &gt; usbd_cdc_if.c</code> file. Find the
 <span class="p">}</span>
 </code></pre></div>
 
-<p>This code takes characters from the recieve buffer and sends them straight back
-out with the transmit function.</p>
+<p>Note that <code>CDC_Receive_FS</code> is a static function so cannot be called outside
+of <code>usbd_cdc_if.c</code>. This code takes characters from the recieve buffer and
+sends them straight back out again using the CDC transmit function.</p>
 <p>Now build the project and download the program to the board using the built in
-ST-Link. Click Project &gt; Build All to build the project. Click Run &gt; Debug As &gt;
-STM32 MCU C/C++ Application. A pop-up window will appear asking you to create a
-new launch configuration. Note that if you are not using a Nucleo board or an
-ST-LINK, you can change the hardware debugger (e.g. to a Segger J-LINK) in the
-Debugger tab. If you are using a Nucleo, leave everything as default and click
-OK.</p>
+ST-Link. Click <strong>Project &gt; Build All</strong> to build the project. Click
+<strong>Run &gt; Debug As &gt; STM32 MCU C/C++ Application</strong>. A pop-up window will appear
+asking you to create a new launch configuration. Note that if you are not using
+a Nucleo/Discovery board or an ST-LINK, you can change the hardware debugger
+(e.g. to a Segger J-LINK) in the Debugger tab. If you are using a
+Nucleo/Discovery, leave everything as default and click <strong>OK</strong>.</p>
 <p>When connected to your host PC by the micro USB (next to the audio jack on the 
-STM32F4 Discovery board), the serial port should show up as <em>/dev/ttyACM1</em> on
-most Linux distributions. Start your favourite serial port terminal, such as
-gtkterm and open <em>ttyACM1</em>. The baud rate doesn't matter as it's ignored by the
-progam. On Ubuntu:</p>
+STM32F4 Discovery board), the serial port should show up as <code>/dev/ttyACM1</code>
+on most Linux distributions. Start up your favourite serial port terminal, such
+as gtkterm and open <code>ttyACM1</code>. The baud rate doesn't matter as it's ignored
+by the progam. On Ubuntu:</p>
 <div class="highlight"><pre><span></span><code>sudo apt-get install gtkterm
 sudo gtkterm
 </code></pre></div>
@@ -133,7 +135,7 @@ STM32. As a simple example, the built-in LED on the STM32F4 Discovery can be
 turned on and off using the VCP.</p>
 <p>First, open the CubeMX (.ioc ) file again to generate the code for the LED. In
 the CubeMX perspective, select the pin for the LED (which is PD13 for the orange
-LED of the STMF4 Discovery board) and set as <strong>GPIO_Output</strong>. Note, if you setup
+LED on the STMF4 Discovery board) and set as <strong>GPIO_Output</strong>. Note, if you setup
 all peripherals with their default mode, this will already be done. Now save the
 file to generate the code again. Next change the <code>CDC_Receive_FS</code> function
 in <code>USB_DEVICE &gt; App &gt; usbd_cdc_if.c</code> as follows:</p>
@@ -155,9 +157,9 @@ in <code>USB_DEVICE &gt; App &gt; usbd_cdc_if.c</code> as follows:</p>
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Here we check the receive buffer for either <code>0</code> or <code>1</code>. If we get
-<code>1</code> we turn the LED on with <code>HAL_GPIO_WritePin()</code>. If we get <code>0</code> we
-turn the LED off.</p>
+<p>Here we check the USB receive buffer to see if we got either <code>0</code> or <code>1</code>.
+If we get <code>1</code> we turn the LED on with <code>HAL_GPIO_WritePin()</code>. If we get
+<code>0</code> we turn the LED off.</p>
 <h2>Hello World!</h2>
 <p>Start with a new USB VCP project following the steps above. Open up <code>Src &gt;
 main.c</code>. At the top, under <code>/* USER CODE BEGIN Includes */</code> , include the 
@@ -165,16 +167,17 @@ USB CDC library header:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;usbd_cdc_if.h&quot;</span><span class="cp"></span>
 </code></pre></div>
 
-<p>This will let us call functions from the USB CDC library. Scroll down to our
-<code>while(1)</code> loop in main. Under <code>/* USER CODE BEGIN 3 */</code> (but still
-inside the while loop), enter the following:</p>
+<p>This will let us call functions from the USB CDC library in our main program.
+Scroll down to our <code>while(1)</code> loop in main. Under
+<code>/* USER CODE BEGIN 3 */</code> (but still inside the while loop), enter the
+following:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">uint8_t</span> <span class="n">msg_buffer</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;Hello world!</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">;</span>
 <span class="n">CDC_Transmit_FS</span><span class="p">(</span><span class="n">msg_buffer</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">msg_buffer</span><span class="p">));</span>
 <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
 </code></pre></div>
 
-<p>Here we create a simple message string and use the USB CDC function to transmit
-the string over USB. We then wait for 1 second before repeating this action
+<p>Here we create a simple message string and use the USB CDC transmit function to
+send the string over USB. We then wait for 1 second before repeating this action
 for ever!</p>
 <p>Build and run the project as before. Open the serial connection, and you should
 be greeted by that oh-so-familiar phrase, repeating over and over again:</p>
