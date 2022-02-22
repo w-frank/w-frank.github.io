@@ -1,7 +1,8 @@
 Title: About
 
 My name is Will. I'm a professional engineer, designer, and writer currently
-based in Oxford, UK.
+based in Oxford, UK.  My particular interests are digital signal processing,
+audio, renewable energy, and agricultral technology.
 
 I can offer a range of skills and services:
 
