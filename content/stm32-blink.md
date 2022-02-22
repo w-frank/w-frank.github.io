@@ -10,7 +10,8 @@ Summary: The Hello World of STM32 embedded programming!
 1. Open STM32CubeMX and start a new STM32 project.
 2. I'm using the STM32 Discovery board which has an STM32F407VG microcontroller
 and 4 onboard LEDs. For this project, I'm using the STM32 Cube Framework with
-the HAL libraries.Select STM32F4-DISC1 from the board selector.
+the HAL libraries. I'm developing on a PC running Ubuntu 20.04.3. Select
+STM32F4-DISC1 from the board selector.
 3. The STM32F4 Discovery board has the following LEDs available to the user:
 
 | LED     | NAME  | PIN  |

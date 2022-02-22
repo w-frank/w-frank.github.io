@@ -210,12 +210,15 @@ article {
 }
 
 img[alt=img-full-width] {
-    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
 }
 
 img[alt=img-half-width] {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 60%;
 }
