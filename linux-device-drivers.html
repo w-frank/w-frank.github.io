@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WILL FRANK</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Will Frank">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="/static/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="https://willfrank.co.uk">WILL FRANK</a>
+                    </div>
+                    <!--<div class="collapse navbar-collapse">-->
+                    <ul class="nav navbar-nav">
+                            <li><a href="/">Blog</a></li>
+                            <li><a href="/pages/about.html">About</a></li>
+                    </ul>
+                    <!--</div>-->
+            </nav>
+<div class="row">
+    <div class="col-md-8">
+        <h1 class="font-weight-bold"><a href="/linux-device-drivers.html">How to Write a Linux Device Driver</a></h1>
+        <label class="font-weight-normal text-muted">Published: 25 January, 2021</label>
+        <p><h2>Introduction</h2>
+<p>What exactly is a Linux kernel module? Modules are peices of code that can be 
+dynamically loaded and unloaded into the kernel on demand. They extend the 
+functionality of the kernel without the need to reboot the system. For example,
+one type of module is the device driver, which allow kernel access to hardware
+connected to the system. Without modules, the kernel would have to be monolithic,
+with new functionality built directly into the kernel image. Not only does this 
+lead to larger kernels, but it also has the disadvantage that the kernel must be
+rebuilt and restarted every time we want to add new functionality.</p>
+<h2>Requirements</h2>
+<p>In order to compile kernel modules you must have the kernel source installed or
+at least the required parts of it. These should always be found under
+<code>/lib/modules/$(uname -r)/build</code>.</p>
+<p>To install them (as root):</p>
+<div class="highlight"><pre><span></span><code><span class="err"># Debian &amp; Ubuntu</span>
+<span class="err">$ sudo apt-get install linux-headers-$(uname -r) </span>
+</code></pre></div>
+
+<h2>Minimal Hello World Driver</h2>
+<p>This is the hello world of device driver programming, the simplest module 
+possible. In your development directory create a file <code>hello_world.c</code> with the 
+following contents:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// hello_world.c</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;linux/init.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;linux/module.h&gt;</span><span class="cp"></span>
+
+<span class="n">MODULE_LICENSE</span> <span class="p">(</span><span class="s">&quot;GPL v3.0&quot;</span><span class="p">);</span>
+
+<span class="k">static</span> <span class="kt">int</span> <span class="n">__init</span> <span class="nf">hello_world_init</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printk</span> <span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">&quot;Hello world: module loaded at 0x%p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">my_init</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="n">__exit</span> <span class="nf">hello_world_exit</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printk</span> <span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">&quot;Bye world: module unloaded from 0x%p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">my_exit</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">module_init</span> <span class="p">(</span><span class="n">hello_world_init</span><span class="p">);</span>
+<span class="n">module_exit</span> <span class="p">(</span><span class="n">hello_world_exit</span><span class="p">);</span>
+</code></pre></div>
+
+<h2>Compiling</h2>
+<p>For the purposes of this guide we will use a very simplified makefile. Create
+a file called <code>makefile</code> containing:</p>
+<div class="highlight"><pre><span></span><code><span class="c"># Minimal Kernel Module Builder</span>
+
+<span class="nv">obj-m</span> <span class="o">+=</span> hello_world.o
+
+<span class="nf">all</span><span class="o">:</span>
+    make -C /lib/modules/<span class="k">$(</span>shell uname -r<span class="k">)</span>/build <span class="nv">M</span><span class="o">=</span><span class="k">$(</span>PWD<span class="k">)</span> modules
+<span class="nf">clean</span><span class="o">:</span>
+    make -C /lib/modules/<span class="k">$(</span>shell uname -r<span class="k">)</span>/build <span class="nv">M</span><span class="o">=</span><span class="k">$(</span>PWD<span class="k">)</span> clean
+</code></pre></div>
+
+<p>Running <code>make</code> should result in something similar to:</p>
+<div class="highlight"><pre><span></span><code>$ make
+make -C /lib/modules/5.8.0-38-generic/build <span class="nv">M</span><span class="o">=</span>/home/will/Documents/linux-device-drivers modules
+make<span class="o">[</span><span class="m">1</span><span class="o">]</span>: Entering directory <span class="s1">&#39;/usr/src/linux-headers-5.8.0-38-generic&#39;</span>
+  CC <span class="o">[</span>M<span class="o">]</span>  /home/will/Documents/linux-device-drivers/hello_world.o
+  MODPOST /home/will/Documents/linux-device-drivers/Module.symvers
+  CC <span class="o">[</span>M<span class="o">]</span>  /home/will/Documents/linux-device-drivers/hello_world.mod.o
+  LD <span class="o">[</span>M<span class="o">]</span>  /home/will/Documents/linux-device-drivers/hello_world.ko
+make<span class="o">[</span><span class="m">1</span><span class="o">]</span>: Leaving directory <span class="s1">&#39;/usr/src/linux-headers-5.8.0-38-generic&#39;</span>
+</code></pre></div>
+
+<p>My kernel version (5.8.0-38-generic) will most likely not be the same as yours
+and my development path <code>/home/will/Documents/</code> will of course be substituted with
+your current path (also in <code>$PWD</code>). We are now ready to load the module!</p>
+<h2>Loading and removing the module</h2>
+<p>Linux provides the following utilities for loading and removing modules: <code>insmod</code>,
+<code>rmmod</code> and <code>modprobe</code>. We will use the first two as they are simpler. To load 
+the module, assuming you are in your development directory:</p>
+<div class="highlight"><pre><span></span><code>$ sudo insmod hello_world.ko
+</code></pre></div>
+
+<p>Following this you will be able to see the message from the module at the end 
+of the kernel messages log. To read the kernal log:</p>
+<div class="highlight"><pre><span></span><code>$ dmesg <span class="p">|</span> tail
+<span class="o">[</span><span class="m">11947</span>.850686<span class="o">]</span> ...
+<span class="o">[</span><span class="m">11949</span>.947172<span class="o">]</span> ...
+<span class="o">[</span><span class="m">13193</span>.606932<span class="o">]</span> Hello world: module loaded at 0x00000000d086c253
+</code></pre></div>
+
+<p><code>dmesg</code> prints the kernel message buffer and since it can be large we filter it
+to only show the last 10 messages with <code>tail</code>.</p>
+<p>You can also check that the module is loaded into the kernel with <code>lsmod</code> or by
+displaying the content of the <code>/proc/modules</code> file:</p>
+<div class="highlight"><pre><span></span><code>$ lsmod
+Module                  Size  Used by
+hello_world            <span class="m">16384</span>  <span class="m">0</span>
+rfcomm                 <span class="m">81920</span>  <span class="m">16</span>
+ccm                    <span class="m">20480</span>  <span class="m">9</span>
+...                    ...    ...
+
+cat /proc/modules <span class="p">|</span> head
+hello_world <span class="m">16384</span> <span class="m">0</span> - Live 0x0000000000000000 <span class="o">(</span>POE<span class="o">)</span>
+rfcomm <span class="m">81920</span> <span class="m">16</span> - Live 0x0000000000000000
+ccm <span class="m">20480</span> <span class="m">9</span> - Live 0x0000000000000000
+...
+</code></pre></div>
+
+<p>Now, to remove the module:</p>
+<div class="highlight"><pre><span></span><code>$ sudo rmmod hello_world
+</code></pre></div>
+
+<p>Note that the module is removed by its name <code>hello_world</code> not by the file name
+<code>hello_world.ko</code>. Checking the message log again:</p>
+<div class="highlight"><pre><span></span><code>$ dmesg <span class="p">|</span> tail
+<span class="o">[</span><span class="m">11949</span>.947172<span class="o">]</span> ...
+<span class="o">[</span><span class="m">13193</span>.606932<span class="o">]</span> ...
+<span class="o">[</span><span class="m">13343</span>.190194<span class="o">]</span> ...
+<span class="o">[</span><span class="m">13680</span>.414640<span class="o">]</span> ...
+<span class="o">[</span><span class="m">13682</span>.000494<span class="o">]</span> ...
+<span class="o">[</span><span class="m">13698</span>.974007<span class="o">]</span> ...
+<span class="o">[</span><span class="m">13706</span>.007413<span class="o">]</span> ...
+<span class="o">[</span><span class="m">13707</span>.943905<span class="o">]</span> Hello world: module loaded at 0x000000002087a0cf
+<span class="o">[</span><span class="m">14071</span>.813961<span class="o">]</span> Bye world: module unloaded from 0x00000000b13cd70a
+</code></pre></div>
+
+<p>At the end of the log, we can see the module printed "Bye world" when it was
+removed.</p></p>
+    </div>
+    <div class="col-md-3">
+        <h4 class="font-weight-bold">Recent Posts</h4>
+        <ul id="recent-posts">
+            <li><a href="/linux-device-drivers.html">How to Write a Linux Device Driver</a></li>
+            <li><a href="/pollinator-plants.html">Planting for Nature: Top 10 wildlife-friendly plants in our garden</a></li>
+            <li><a href="/swift-action-needed.html">Swift Action Needed: Designing a Swift Caller</a></li>
+        </ul>
+        <h4 class="font-weight-bold">Categories</h4>
+        <ul id="category-list">
+            <li><a href="/category/conservation.html">Conservation</a></li>
+            <li><a href="/category/gardening.html">Gardening</a></li>
+            <li><a href="/category/linux.html">Linux</a></li>
+        </ul>
+        <h4 class="font-weight-bold">Tags</h4>
+        <ul id="tag-list">
+            <li><a href="/tag/linux.html">linux</a></li>
+            <li><a href="/tag/programming.html">programming</a></li>
+            <li><a href="/tag/electronics.html">electronics</a></li>
+            <li><a href="/tag/wildlife.html">wildlife</a></li>
+            <li><a href="/tag/conservation.html">conservation</a></li>
+            <li><a href="/tag/nature.html">nature</a></li>
+            <li><a href="/tag/gardening.html">gardening</a></li>
+            <li><a href="/tag/horticulture.html">horticulture</a></li>
+            <li><a href="/tag/technology.html">technology</a></li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <footer class="blog-footer">
+            <div class="container">
+                <span class="text-muted">Will Frank 2020. Handcrafted using <a href="https://www.python.org/">Python</a>, <a href="https://docs.getpelican.com/en/stable/">Pelican</a> and <a href="https://getbootstrap.com/">Bootstrap</a>. Published with <a href="https://pages.github.com/">GitHub Pages.</a></span>
+            </container>
+        </footer>
+    </body>
+</html>

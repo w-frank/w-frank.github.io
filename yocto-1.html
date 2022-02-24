@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WILL FRANK</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Will Frank">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="/static/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="https://willfrank.co.uk">WILL FRANK</a>
+                    </div>
+                    <!--<div class="collapse navbar-collapse">-->
+                    <ul class="nav navbar-nav">
+                            <li><a href="/">Blog</a></li>
+                            <li><a href="/pages/about.html">About</a></li>
+                    </ul>
+                    <!--</div>-->
+            </nav>
+<div class="row">
+    <div class="col-md-8">
+        <h1 class="font-weight-bold"><a href="/yocto-1.html">How to Create your own Linux custom distribution using Yocto</a></h1>
+        <label class="font-weight-normal text-muted">6 February, 2021</label>
+        <p><h2>Prepare the Host</h2>
+<p>First we will install all the required dependencies on our host system. I am
+using Ubuntu. If you are using a different distribution then take a look at the
+<a href="https://www.yoctoproject.org/docs/2.4/yocto-project-qs/yocto-project-qs.html">Yocto project Quick Start guide</a>
+to see what dependencies to install.
+git clone git://git.yoctoproject.org/poky
+sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+    build-essential chrpath socat cpio python python3 python3-pip python3-pexpect \
+    xz-utils debianutils iputils-ping libsdl1.2-dev xterm</p>
+<div class="highlight"><pre><span></span><code><span class="err">## Clone the Yocto Poky</span>
+<span class="err">We will now clone the Yocto repoository from the Yocto Project website. Run the</span>
+<span class="err">command below, which will download the latest release (the &quot;sumo&quot; branch). We</span>
+<span class="err">will create a directory in the home directory to build our Yocto project:</span>
+<span class="err">```shell</span>
+<span class="err">mkdir ~/Yocto</span>
+<span class="err">mkdir ~/Yocto/test-project</span>
+<span class="err">cd ~/Yocto/test-project</span>
+<span class="err">git clone git://git.yoctoproject.org/poky</span>
+</code></pre></div>
+
+<h2>Initialise the Build Environment</h2>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> poky
+<span class="nb">source</span> oe-init-build-env build
+</code></pre></div>
+
+<h2>Configuring Yocto</h2>
+<p>Navigate to the configuration directory</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> conf
+</code></pre></div></p>
+        <h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'willfrank-co-uk'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    <div class="col-md-3">
+        <h4 class="font-weight-bold">Recent Posts</h4>
+        <ul id="recent-posts">
+            <li><a href="/yocto-1.html">How to Create your own Linux custom distribution using Yocto</a></li>
+            <li><a href="/petalinux-1.html">Getting Started with Embedded Linux - PetaLinux</a></li>
+            <li><a href="/zynq-connection-1.html">How to Connect to Xilinx Zynq Boards from Linux</a></li>
+            <li><a href="/linux-kernel-moduled-1.html">How to Write a Linux Kernel Module</a></li>
+            <li><a href="/pollinator-plants.html">Planting for Nature: Top 10 wildlife-friendly plants in our garden</a></li>
+            <li><a href="/swift-action-needed.html">Swift Action Needed: Designing a Swift Caller</a></li>
+        </ul>
+        <h4 class="font-weight-bold">Categories</h4>
+        <ul id="category-list">
+            <li><a href="/category/conservation.html">Conservation</a></li>
+            <li><a href="/category/gardening.html">Gardening</a></li>
+            <li><a href="/category/linux.html">Linux</a></li>
+        </ul>
+        <h4 class="font-weight-bold">Tags</h4>
+        <ul id="tag-list">
+            <li><a href="/tag/linux.html">linux</a></li>
+            <li><a href="/tag/programming.html">programming</a></li>
+            <li><a href="/tag/electronics.html">electronics</a></li>
+            <li><a href="/tag/zynq.html">zynq</a></li>
+            <li><a href="/tag/wildlife.html">wildlife</a></li>
+            <li><a href="/tag/conservation.html">conservation</a></li>
+            <li><a href="/tag/nature.html">nature</a></li>
+            <li><a href="/tag/gardening.html">gardening</a></li>
+            <li><a href="/tag/horticulture.html">horticulture</a></li>
+            <li><a href="/tag/technology.html">technology</a></li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <footer class="blog-footer">
+            <div class="container">
+                <span class="text-muted">Will Frank 2021. Handcrafted using <a href="https://www.python.org/">Python</a>, <a href="https://docs.getpelican.com/en/stable/">Pelican</a> and <a href="https://getbootstrap.com/">Bootstrap</a>. Published with <a href="https://pages.github.com/">GitHub Pages.</a></span>
+            </container>
+        </footer>
+    </body>
+</html>
