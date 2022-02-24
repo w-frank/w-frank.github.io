@@ -31,75 +31,21 @@
             </nav>
 <div class="row">
     <div class="col-md-8">
-        <h1><a href="/stm32-led.html">STM32: Blink an LED</a></h1>
-        <label class="tag" href="/tags/STM32.html">STM32</label>
-        <label class="tag" href="/tags/ARM.html">ARM</label>
+        <h1><a href="/linux-serial-programming-1.html">Programming Serial Ports on Linux</a></h1>
         <label class="tag" href="/tags/linux.html">linux</label>
         <label class="tag" href="/tags/programming.html">programming</label>
         </label>
-        <label class="font-weight-normal text-muted">&#8226 12 February, 2022</label>
-        <p><ol>
-<li>Open STM32CubeMX and start a new STM32 project.</li>
-<li>I'm using the STM32 Discovery board which has an STM32F407VG microcontroller
-and 4 onboard LEDs. For this project, I'm using the STM32 Cube Framework with
-the HAL libraries. I'm developing on a PC running Ubuntu 20.04.3. Select
-STM32F4-DISC1 from the board selector.</li>
-<li>The STM32F4 Discovery board has the following LEDs available to the user:</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>LED</th>
-<th>NAME</th>
-<th>PIN</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Green</td>
-<td>LD4</td>
-<td>PD12</td>
-</tr>
-<tr>
-<td>Orange</td>
-<td>LD3</td>
-<td>PD13</td>
-</tr>
-<tr>
-<td>Red</td>
-<td>LD5</td>
-<td>PD14</td>
-</tr>
-<tr>
-<td>Blue</td>
-<td>LD6</td>
-<td>PD15</td>
-</tr>
-</tbody>
-</table>
-<p>For this tutorial we'll use the green LED. In the MCU pinout viewer, set PD12
-to GPIO_Output. Save and generate the code.</p>
-<ol>
-<li>In the code editor, add the following to the main function in <code>main.c</code>:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="cm">/* Infinite loop */</span>
-<span class="cm">/* USER CODE BEGIN WHILE */</span>
-<span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="n">HAL_GPIO_TogglePin</span><span class="p">(</span><span class="n">GPIOD</span><span class="p">,</span> <span class="n">GPIO_PIN_12</span><span class="p">);</span>
-  <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
-<span class="cm">/* USER CODE END WHILE */</span>
-
-<span class="cm">/* USER CODE BEGIN 3 */</span>
-
-<span class="p">}</span>
-<span class="cm">/* USER CODE END 3 */</span>
-</code></pre></div>
-
-<ol>
-<li>Build the program and download it to the board. You should see the green LED
-flashing every 1 second.</li>
-</ol></p>
+        <label class="font-weight-normal text-muted">&#8226 31 January, 2022</label>
+        <p><p>This is a tutorial on how to program the serial ports on your Linux machine.</p>
+<h2>Serial Ports on Linux</h2>
+<p>Traditional hardware serial ports on Linux are names as ttyS* where * can be 1,
+2,3,... etc. E.g. ttyS1, ttyS2, ttyS3, ...</p>
+<p>In Linux hardware components such as sserial ports are treated as files and are
+located ub rge /dev folder in the file system/ If you navigate to the /dev folder
+and list the files using the ls command you can see the files corresponding to
+various hardware devices:</p>
+<h2>Programming the Serial Port</h2>
+<p>To perform serial I/O in Linux we are going to use the termios API.</p></p>
         <h2>Comments</h2>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
