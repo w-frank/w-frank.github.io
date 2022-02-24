@@ -1,6 +1,6 @@
 Title: Programming Serial Ports on Linux
-Date: 2022-31-01 12:00
-Modified: 2022-31-01 12:00
+Date: 2022-01-31 12:00
+Modified: 2022-01-31 12:00
 Category: Linux
 Tags: linux, programming
 Slug: linux-serial-programming-1
