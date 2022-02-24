@@ -4,7 +4,10 @@ Title: Portfolio
 
 Dual fixed voltage regulator module based on LM78XX / LM79XX.
 
-![img-half-width](../images/portfolio/dual-voltage-regulator.png)
+![img-quart-width](../images/portfolio/dual-voltage-regulator.png)
+![img-quart-width](../images/portfolio/voltage-regulator.png)
+
+
 
 ### Features
 * +7-38V input -> +5-24V output, -7-30V input -> -5-15V output.

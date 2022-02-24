@@ -220,5 +220,13 @@ img[alt=img-half-width] {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 50%;
 }
+
+img[alt=img-quart-width] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
