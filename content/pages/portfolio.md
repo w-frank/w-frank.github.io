@@ -1,5 +1,21 @@
 Title: Portfolio
 
+## PmodPulse
+
+Configurable dual channel digital output for driving lengths of terminated
+coaxial cable from microcontrollers / FPGAs.
+
+![img-quart-width](../images/portfolio/pmod-pulse.png)
+
+### Features
+* Up to 2 digital outputs on SMA connectors.
+* TTL output switching levels.
+* Up to 256mA max. output current capability (configurable with zero-ohm resistors).
+* Optional AUX output (configurable with zero-ohm resistors).
+* Optional back termination resistors for double-ended or series termination.
+* 6-pin Digilent Pmod Interface Specification compatible.
+<br/><br/>
+
 ## Dual Voltage Regulator
 
 Dual fixed voltage regulator module based on LM78XX / LM79XX.
