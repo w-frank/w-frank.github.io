@@ -1,6 +1,22 @@
 Title: Portfolio
 
-## PmodPulse
+## Bipolar ADC driver
+
+Single channel ADC driver for driving medium speed, 16-bit SAR ADCs from a
+bipolar input.
+
+![img-quart-width](../images/portfolio/adc-driver.png)
+
+### Features
+* Default level translation: +/- 12 V -> 0 - +5 V.
+* 15 MHz bandwidth.
+* 50 ohm or high input impedance (10^13 ohm).
+* Low noise/distortion: Vn = 4 μVp-p, THD + N = 106 dB.
+* High CMRR: 80 dB
+* Select on-board (+5 V) or external voltage reference, for configurable ranges.
+<br/><br/>
+
+## Pmod Pulse
 
 Configurable dual channel digital output for driving lengths of terminated
 coaxial cable from microcontrollers / FPGAs.
