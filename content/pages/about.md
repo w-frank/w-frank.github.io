@@ -1,8 +1,12 @@
 Title: About
 
 My name is Will. I'm an engineer, designer, and writer currently
-based in Oxford, UK.  My particular interests span digital signal processing,
-audio, renewable energy, and agricultural technology.
+based in Oxford, UK. My technical interests span embedded systems, digital
+signal processing, and control systems particularly in the fields of audio
+electronics, renewable energy, and agricultural technology.
+
+This site is for me to share what I've learnt on the [blog](https://www.willfrank.co.uk/),
+and archive various projects in my [portfolio](https://willfrank.co.uk/pages/portfolio.html).
 
 I can offer a range of skills and services:
 

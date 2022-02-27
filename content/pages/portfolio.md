@@ -12,7 +12,7 @@ bipolar input.
 * 15 MHz bandwidth.
 * 50 ohm or high input impedance (10^13 ohm).
 * Low noise/distortion: Vn = 4 μVp-p, THD + N = 106 dB.
-* High CMRR: 80 dB
+* High CMRR: 80 dB.
 * Select on-board (+5 V) or external voltage reference, for configurable ranges.
 <br/><br/>
 
