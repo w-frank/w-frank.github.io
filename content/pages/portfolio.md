@@ -8,7 +8,7 @@ bipolar input.
 ![img-quart-width](../images/portfolio/adc-driver.png)
 
 ### Features
-* Default level translation: +/- 12 V -> 0 - +5 V.
+* Default level translation: +/-12 V -> 0 - +5 V.
 * 15 MHz bandwidth.
 * 50 ohm or high input impedance (10^13 ohm).
 * Low noise/distortion: Vn = 4 μVp-p, THD + N = 106 dB.
@@ -26,7 +26,7 @@ coaxial cable from microcontrollers / FPGAs.
 ### Features
 * Up to 2 digital outputs on SMA connectors.
 * TTL output switching levels.
-* Up to 256mA max. output current capability (configurable with zero-ohm resistors).
+* Up to 256 mA max. output current capability (configurable with zero-ohm resistors).
 * Optional AUX output (configurable with zero-ohm resistors).
 * Optional back termination resistors for double-ended or series termination.
 * 6-pin Digilent Pmod Interface Specification compatible.
@@ -40,8 +40,8 @@ Dual fixed voltage regulator module based on LM78XX / LM79XX.
 ![img-quart-width](../images/portfolio/voltage-regulator.png)
 
 ### Features
-* +7-38V input -> +5-24V output, -7-30V input -> -5-15V output.
-* Output current: up to 1.5A.
+* +7-38 V input -> +5-24 V output, -7-30 V input -> -5-15 V output.
+* Output current: up to 1.5 A.
 * Voltage regulators: 1 x LM78XX, 1 x LM79XX.
 * Reverse voltage protection.
 * On board and external power LED indicators.
@@ -56,12 +56,12 @@ system.
 
 ### Features
 * 1U, 19" rack mount aluminium chassis.
-* Designed for +/- 10V differential input signals.
+* Designed for +/- 10 V differential input signals.
 * x16 inputs (dual pin LEMO connectors) on front.
 * x16 outputs (dual pin LEMO connectors) on front.
 * x16 outputs (68 way SCSI connector) on rear.
-* Transient protection on all inputs (bi-directional TVS diodes: +/-30V clamp,
-1.5kW peak pulse).
+* Transient protection on all inputs (bi-directional TVS diodes: +/-30 V clamp,
+1.5 kW peak pulse).
 * Optional IEC mains inlet connector, if internal power is required.
 <br/><br/>
 
@@ -75,8 +75,8 @@ acquisition system.
 ![img-quart-width](../images/portfolio/current-amp-eurocrate.jpg)
 
 ### Features
-* Transimpedance amplifier gain of 3000.
-* Relay selectable 10kHz or 30 MHz bandwidth.
+* Transimpedance gain of 3000.
+* Relay selectable 10 kHz or 30 MHz bandwidth.
 * 50 ohm input impedance.
 * Up to 40 channels in a Eurocard crate.
 * Pulse generator card with external trigger for testing and calibration.
