@@ -39,8 +39,6 @@ Dual fixed voltage regulator module based on LM78XX / LM79XX.
 ![img-quart-width](../images/portfolio/dual-voltage-regulator.png)
 ![img-quart-width](../images/portfolio/voltage-regulator.png)
 
-
-
 ### Features
 * +7-38V input -> +5-24V output, -7-30V input -> -5-15V output.
 * Output current: up to 1.5A.
@@ -51,8 +49,8 @@ Dual fixed voltage regulator module based on LM78XX / LM79XX.
 
 ## Data Acquisition Connection Unit
 
-Signal connection unit designed for use with a multi-channel scientific data
-acquisition system.
+Signal connection unit designed for a multi-channel scientific data acquisition
+system.
 
 ![img-half-width](../images/portfolio/daq-connection-unit.jpg)
 
@@ -65,3 +63,22 @@ acquisition system.
 * Transient protection on all inputs (bi-directional TVS diodes: +/-30V clamp,
 1.5kW peak pulse).
 * Optional IEC mains inlet connector, if internal power is required.
+<br/><br/>
+
+## Current Amplifier Eurocrate
+
+Modular 4 channel current amplifiers in Eurocard format for ion detector data
+acquisition system.
+
+![img-quart-width](../images/portfolio/current-amp-eurocard.jpg)
+![img-quart-width](../images/portfolio/pulse-gen-eurocard.jpg)
+![img-quart-width](../images/portfolio/current-amp-eurocrate.jpg)
+
+### Features
+* Transimpedance amplifier gain of 3000.
+* Relay selectable 10kHz or 30 MHz bandwidth.
+* 50 ohm input impedance.
+* Up to 40 channels in a Eurocard crate.
+* Pulse generator card with external trigger for testing and calibration.
+<br/><br/>
+
