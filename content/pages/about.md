@@ -37,3 +37,5 @@ User, installation, and maintenance guides, manuals, tutorials.
 Requirements and specifications, design documents, test procedures.
 
 Project budgets and schedules.
+
+**Get in touch:** <musa_instruments@protonmail.com>

@@ -2,7 +2,7 @@ Title: Portfolio
 
 ## Bipolar ADC driver
 
-Single channel ADC driver for driving medium speed, 16-bit SAR ADCs from a
+Single channel ADC front-end for driving medium speed, 16-bit SAR ADCs from a
 bipolar input.
 
 ![img-quart-width](../images/portfolio/adc-driver.png)
