@@ -49,10 +49,11 @@ DEFAULT_PAGINATION = 5
 DISPLAY_CATEGORIES_ON_MENU = False
 
 MENUITEMS = (
-    ('projects', '/projects.html'),
-    ('about', '/about.html'),
-    ('blog', '/blog.html')
+    ('Blog', '/'),
+    ('Portfolio', '/pages/portfolio.html'),
+    ('About', '/pages/about.html')
 )
+
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
