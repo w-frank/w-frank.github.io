@@ -5,6 +5,9 @@ based in Oxford, UK. My technical interests span embedded systems, digital
 signal processing, and control systems particularly in the fields of audio
 electronics, renewable energy, and agricultural technology.
 
+I have a background in the research and development of scientific
+data acquisition and control systems, primarily for use on particle accelerators.
+
 This site is for me to share what I've learnt on the [blog](https://www.willfrank.co.uk/),
 and archive various projects in my [portfolio](https://willfrank.co.uk/pages/portfolio.html).
 
@@ -39,3 +42,8 @@ Requirements and specifications, design documents, test procedures.
 Project budgets and schedules.
 
 **Get in touch:** <musa_instruments@protonmail.com>
+
+**Connect me with me on [GitHub](https://github.com/w-frank):**
+
+![GitHub](../images/GitHub-Mark-Light-32px.png)
+
