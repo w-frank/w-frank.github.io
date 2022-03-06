@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Will Frank</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Will Frank">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="/static/css/colorbox.css" rel="stylesheet">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="/static/css/style.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Space Mono">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" >
+        
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <h1 class="navbar-brand" href="https://willfrank.co.uk">Will Frank</h1>
+                    </div>
+                    <!--<div class="collapse navbar-collapse">-->
+                    <ul class="nav navbar-nav">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/pages/portfolio.html">Portfolio</a></li>
+                                <li><a href="/pages/about.html">About</a></li>
+                    </ul>
+                    <!--</div>-->
+            </nav>
+<div class="row">
+    <div class="col-md-8">
+        <h1><a href="/sending-files-with-kermit-1.html">Sending Files Over Serial With Kermit</a></h1>
+        <label class="tag" href="/tags/linux.html">linux</label>
+        <label class="tag" href="/tags/programming.html">programming</label>
+        </label>
+        <label class="font-weight-normal text-muted">&#8226 9 December, 2021</label>
+        <p><h2>Introduction</h2>
+<p>I recently needed to send a binary FPGA image file from a Windows PC to a device
+running embedded Linux that only had a serial console access on a USB port.
+Fortunately, the device had kermit installed and I could use 
+<a href="https://ttssh2.osdn.jp/index.html.en">Tera Term</a> to transfer the file.</p>
+<p>Kermit is a file transfer/management protocol and a set of communications
+software tools. Kermit can be installed on Liunx using standard package
+repositories. Versions for Windows and most other platforms are available from 
+<code>http://www.kermitproject.org/current.html</code>. Tera Term has kermit built in and
+can be downloaded from <code>https://ttssh2.osdn.jp/index.html.en</code>.</p>
+<h2>Running Kermit</h2>
+<p>Kermit is started on Linux by running</p>
+<div class="highlight"><pre><span></span><code>$ kermit
+</code></pre></div>
+
+<p>Once started kermit will output something similar to the following and enter the
+kermit prompt</p>
+<div class="highlight"><pre><span></span><code>C-Kermit <span class="m">9</span>.0.304 OPEN SOURCE: Dev.22, <span class="m">1</span> May <span class="m">2017</span>, <span class="k">for</span> Linux
+ Copyright <span class="o">(</span>C<span class="o">)</span> <span class="m">1985</span>, <span class="m">2017</span>,
+  Trustees of Columbia University <span class="k">in</span> the City of New York.
+Type ? or HELP <span class="k">for</span> help.
+<span class="o">(</span>~/<span class="o">)</span> C-Kermit&gt;
+</code></pre></div>
+
+<h2>Configure Serial Connection</h2>
+<p>To display the detected serial ports on the remote Linux machine run the
+<code>dmesg</code> command and search for serial ports:</p>
+<div class="highlight"><pre><span></span><code>$ dmesg <span class="p">|</span> grep tty
+</code></pre></div>
+
+<p>In my case the USB console was <code>\dev\ttyPS0</code>.</p>
+<p>The kermit console can then be used to configure the serial port at
+<code>\dev\ttyPS0</code> and file settings:</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>~/<span class="o">)</span> C-Kermit&gt; <span class="nb">set</span> line <span class="se">\d</span>ev<span class="se">\t</span>tyPS0
+<span class="o">(</span>~/<span class="o">)</span> C-Kermit&gt; <span class="nb">set</span> carrier-watch off
+<span class="o">(</span>~/<span class="o">)</span> C-Kermit&gt; <span class="nb">set</span> speed <span class="m">115200</span>
+<span class="o">(</span>~/<span class="o">)</span> C-Kermit&gt; <span class="nb">set</span> parity none
+<span class="o">(</span>~/<span class="o">)</span> C-Kermit&gt; <span class="nb">set</span> stop-bits <span class="m">1</span>
+<span class="o">(</span>~/<span class="o">)</span> C-Kermit&gt; <span class="nb">set</span> flow-control none
+<span class="o">(</span>~/<span class="o">)</span> C-Kermit&gt; <span class="nb">set</span> file <span class="nb">type</span> bin
+</code></pre></div>
+
+<p>In my case the port is set to 115200 baud, 8 bits, no parity, 1 stop bit, no
+flow control and the file type is binary.</p>
+<p>Now, to connect to the Windows host PC run</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>~/<span class="o">)</span> C-Kermit&gt; connect
+</code></pre></div>
+
+<p>once connected prepare kermit to receive a file:</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>~/<span class="o">)</span> C-Kermit&gt; receive
+Return to your <span class="nb">local</span> Kermit and give a SEND command.
+
+KERMIT READY TO RECEIVE...
+</code></pre></div>
+
+<h2>Transfer File Using Tera Term</h2>
+<p>Open Tera Term and setup the serial connection <code>Setup &gt; Serial Port...</code>. Use the
+same settings as the remote kermit session above. The relevant port can be found
+using the Windows Device Manager. To open the port click <code>New open</code>.</p>
+<p>To start the file transfer click <code>File &gt; Transfer &gt; Kermit &gt; Send...</code> and select
+and open the file you wish to send.</p>
+<h2>Ending a Kermit Session</h2>
+<p>Once the file transfer is complete, close the serial port and exit kermit:</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>~/<span class="o">)</span> C-Kermit&gt; close
+<span class="o">(</span>~/<span class="o">)</span> C-Kermit&gt; <span class="nb">exit</span>
+</code></pre></div>
+
+<p>The default location for the transferred file is your home directory.</p></p>
+        <h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'willfrank-co-uk'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    <div class="col-md-3">
+        <h4>Recent Posts</h4>
+        <ul id="recent-posts">
+            <li><a href="/stm32-vcp.html">STM32: USB Virtual COM Port (VCP)</a></li>
+            <li><a href="/stm32-led.html">STM32: Blink an LED</a></li>
+            <li><a href="/sending-files-with-kermit-1.html">Sending Files Over Serial With Kermit</a></li>
+            <li><a href="/port-audio-1.html">Build and Use PortAudio on Linux (using CMake)</a></li>
+        </ul>
+        <!--
+        <h4>Categories</h4>
+        <ul id="category-list">
+            <li><a href="/category/linux.html">Linux</a></li>
+            <li><a href="/category/stm32.html">STM32</a></li>
+        </ul>
+        -->
+        <h4>Tags</h4>
+        <ul id="tag-list">
+            <li><a href="/tag/stm32.html">STM32</a></li>
+            <li><a href="/tag/arm.html">ARM</a></li>
+            <li><a href="/tag/linux.html">linux</a></li>
+            <li><a href="/tag/programming.html">programming</a></li>
+            <li><a href="/tag/audio.html">audio</a></li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <footer class="blog-footer">
+            <div class="container">
+                <span class="text-muted">Will Frank 2022. Handcrafted using <a href="https://www.python.org/">Python</a>, <a href="https://docs.getpelican.com/en/stable/">Pelican</a> and <a href="https://getbootstrap.com/">Bootstrap</a>. Published with <a href="https://pages.github.com/">GitHub Pages.</a></span>
+            </container>
+        </footer>
+
+        <script src="/static/js/jquery.min.js"></script>
+        <!-- Make sure jquery is loaded first, then load colorbox -->
+        <script src="/static/js/jquery.colorbox-min.js"></script>
+        <script src="/static/js/load-colorbox.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var url = window.location;
+                $('.navbar-nav a[href="'+ url +'test"]').parent().addClass('active');
+                $('.navbar-nav a').filter(function() {
+                     return this.href == url;
+                }).parent().addClass('active');
+            });
+        </script> 
+    </body>
+</html>

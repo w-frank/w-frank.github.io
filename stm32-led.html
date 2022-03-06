@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Will Frank</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Will Frank">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="/static/css/colorbox.css" rel="stylesheet">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="/static/css/style.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Space Mono">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" >
+        
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <h1 class="navbar-brand" href="https://willfrank.co.uk">Will Frank</h1>
+                    </div>
+                    <!--<div class="collapse navbar-collapse">-->
+                    <ul class="nav navbar-nav">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/pages/portfolio.html">Portfolio</a></li>
+                                <li><a href="/pages/about.html">About</a></li>
+                    </ul>
+                    <!--</div>-->
+            </nav>
+<div class="row">
+    <div class="col-md-8">
+        <h1><a href="/stm32-led.html">STM32: Blink an LED</a></h1>
+        <label class="tag" href="/tags/STM32.html">STM32</label>
+        <label class="tag" href="/tags/ARM.html">ARM</label>
+        <label class="tag" href="/tags/linux.html">linux</label>
+        <label class="tag" href="/tags/programming.html">programming</label>
+        </label>
+        <label class="font-weight-normal text-muted">&#8226 12 February, 2022</label>
+        <p><ol>
+<li>Open STM32CubeMX and start a new STM32 project.</li>
+<li>I'm using the STM32 Discovery board which has an STM32F407VG microcontroller
+and 4 onboard LEDs. For this project, I'm using the STM32 Cube Framework with
+the HAL libraries. I'm developing on a PC running Ubuntu 20.04.3. Select
+STM32F4-DISC1 from the board selector.</li>
+<li>The STM32F4 Discovery board has the following LEDs available to the user:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>LED</th>
+<th>NAME</th>
+<th>PIN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Green</td>
+<td>LD4</td>
+<td>PD12</td>
+</tr>
+<tr>
+<td>Orange</td>
+<td>LD3</td>
+<td>PD13</td>
+</tr>
+<tr>
+<td>Red</td>
+<td>LD5</td>
+<td>PD14</td>
+</tr>
+<tr>
+<td>Blue</td>
+<td>LD6</td>
+<td>PD15</td>
+</tr>
+</tbody>
+</table>
+<p>For this tutorial we'll use the green LED. In the MCU pinout viewer, set PD12
+to GPIO_Output. Save and generate the code.</p>
+<ol>
+<li>In the code editor, add the following to the main function in <code>main.c</code>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="cm">/* Infinite loop */</span><span class="w"></span>
+<span class="cm">/* USER CODE BEGIN WHILE */</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">HAL_GPIO_TogglePin</span><span class="p">(</span><span class="n">GPIOD</span><span class="p">,</span><span class="w"> </span><span class="n">GPIO_PIN_12</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"></span>
+<span class="cm">/* USER CODE END WHILE */</span><span class="w"></span>
+
+<span class="cm">/* USER CODE BEGIN 3 */</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+<span class="cm">/* USER CODE END 3 */</span><span class="w"></span>
+</code></pre></div>
+
+<ol>
+<li>Build the program and download it to the board. You should see the green LED
+flashing every 1 second.</li>
+</ol></p>
+        <h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'willfrank-co-uk'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    <div class="col-md-3">
+        <h4>Recent Posts</h4>
+        <ul id="recent-posts">
+            <li><a href="/stm32-vcp.html">STM32: USB Virtual COM Port (VCP)</a></li>
+            <li><a href="/stm32-led.html">STM32: Blink an LED</a></li>
+            <li><a href="/sending-files-with-kermit-1.html">Sending Files Over Serial With Kermit</a></li>
+            <li><a href="/port-audio-1.html">Build and Use PortAudio on Linux (using CMake)</a></li>
+        </ul>
+        <!--
+        <h4>Categories</h4>
+        <ul id="category-list">
+            <li><a href="/category/linux.html">Linux</a></li>
+            <li><a href="/category/stm32.html">STM32</a></li>
+        </ul>
+        -->
+        <h4>Tags</h4>
+        <ul id="tag-list">
+            <li><a href="/tag/stm32.html">STM32</a></li>
+            <li><a href="/tag/arm.html">ARM</a></li>
+            <li><a href="/tag/linux.html">linux</a></li>
+            <li><a href="/tag/programming.html">programming</a></li>
+            <li><a href="/tag/audio.html">audio</a></li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <footer class="blog-footer">
+            <div class="container">
+                <span class="text-muted">Will Frank 2022. Handcrafted using <a href="https://www.python.org/">Python</a>, <a href="https://docs.getpelican.com/en/stable/">Pelican</a> and <a href="https://getbootstrap.com/">Bootstrap</a>. Published with <a href="https://pages.github.com/">GitHub Pages.</a></span>
+            </container>
+        </footer>
+
+        <script src="/static/js/jquery.min.js"></script>
+        <!-- Make sure jquery is loaded first, then load colorbox -->
+        <script src="/static/js/jquery.colorbox-min.js"></script>
+        <script src="/static/js/load-colorbox.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var url = window.location;
+                $('.navbar-nav a[href="'+ url +'test"]').parent().addClass('active');
+                $('.navbar-nav a').filter(function() {
+                     return this.href == url;
+                }).parent().addClass('active');
+            });
+        </script> 
+    </body>
+</html>

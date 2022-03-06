@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Will Frank">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="/static/css/colorbox.css" rel="stylesheet">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="/static/css/style.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Space Mono">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" >
+        
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <h1 class="navbar-brand" href="https://willfrank.co.uk">Will Frank</h1>
+                    </div>
+                    <!--<div class="collapse navbar-collapse">-->
+                    <ul class="nav navbar-nav">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/pages/portfolio.html">Portfolio</a></li>
+                                <li><a href="/pages/about.html">About</a></li>
+                    </ul>
+                    <!--</div>-->
+            </nav>
+<div class='page'>
+    <div><h2>Bipolar ADC driver</h2>
+<p>Single channel ADC front-end for driving medium speed, 16-bit SAR ADCs from a
+bipolar input.</p>
+<p><img alt="img-quart-width" src="../images/portfolio/adc-driver.png"></p>
+<h3>Features</h3>
+<ul>
+<li>Default level translation: +/-12 V -&gt; 0 - +5 V.</li>
+<li>15 MHz bandwidth.</li>
+<li>50 ohm or high input impedance (10^13 ohm).</li>
+<li>Low noise/distortion: Vn = 4 μVp-p, THD + N = 106 dB.</li>
+<li>High CMRR: 80 dB.</li>
+<li>Select on-board (+5 V) or external voltage reference, for configurable ranges.
+<br/><br/></li>
+</ul>
+<h2>Pmod Pulse</h2>
+<p>Configurable dual channel digital output for driving lengths of terminated
+coaxial cable from microcontrollers / FPGAs.</p>
+<p><img alt="img-quart-width" src="../images/portfolio/pmod-pulse.png"></p>
+<h3>Features</h3>
+<ul>
+<li>Up to 2 digital outputs on SMA connectors.</li>
+<li>TTL output switching levels.</li>
+<li>Up to 256 mA max. output current capability (configurable with zero-ohm resistors).</li>
+<li>Optional AUX output (configurable with zero-ohm resistors).</li>
+<li>Optional back termination resistors for double-ended or series termination.</li>
+<li>6-pin Digilent Pmod Interface Specification compatible.
+<br/><br/></li>
+</ul>
+<h2>Dual Voltage Regulator</h2>
+<p>Dual fixed voltage regulator module based on LM78XX / LM79XX.</p>
+<p><img alt="img-quart-width" src="../images/portfolio/dual-voltage-regulator.png">
+<img alt="img-quart-width" src="../images/portfolio/voltage-regulator.png"></p>
+<h3>Features</h3>
+<ul>
+<li>+7-38 V input -&gt; +5-24 V output, -7-30 V input -&gt; -5-15 V output.</li>
+<li>Output current: up to 1.5 A.</li>
+<li>Voltage regulators: 1 x LM78XX, 1 x LM79XX.</li>
+<li>Reverse voltage protection.</li>
+<li>On board and external power LED indicators.
+<br/><br/></li>
+</ul>
+<h2>Data Acquisition Connection Unit</h2>
+<p>Signal connection unit designed for a multi-channel scientific data acquisition
+system.</p>
+<p><img alt="img-half-width" src="../images/portfolio/daq-connection-unit.jpg"></p>
+<h3>Features</h3>
+<ul>
+<li>1U, 19" rack mount aluminium chassis.</li>
+<li>Designed for +/- 10 V differential input signals.</li>
+<li>x16 inputs (dual pin LEMO connectors) on front.</li>
+<li>x16 outputs (dual pin LEMO connectors) on front.</li>
+<li>x16 outputs (68 way SCSI connector) on rear.</li>
+<li>Transient protection on all inputs (bi-directional TVS diodes: +/-30 V clamp,
+1.5 kW peak pulse).</li>
+<li>Optional IEC mains inlet connector, if internal power is required.
+<br/><br/></li>
+</ul>
+<h2>Current Amplifier Eurocrate</h2>
+<p>Modular 4 channel current amplifiers in Eurocard format for ion detector data
+acquisition system.</p>
+<p><img alt="img-quart-width" src="../images/portfolio/current-amp-eurocard.jpg">
+<img alt="img-quart-width" src="../images/portfolio/pulse-gen-eurocard.jpg">
+<img alt="img-quart-width" src="../images/portfolio/current-amp-eurocrate.jpg"></p>
+<h3>Features</h3>
+<ul>
+<li>Transimpedance gain of 3000.</li>
+<li>Relay selectable 10 kHz or 30 MHz bandwidth.</li>
+<li>50 ohm input impedance.</li>
+<li>Up to 40 channels in a Eurocard crate.</li>
+<li>Pulse generator card with external trigger for testing and calibration.
+<br/><br/></li>
+</ul></div>
+</div>
+        </div>
+        <footer class="blog-footer">
+            <div class="container">
+                <span class="text-muted">Will Frank 2022. Handcrafted using <a href="https://www.python.org/">Python</a>, <a href="https://docs.getpelican.com/en/stable/">Pelican</a> and <a href="https://getbootstrap.com/">Bootstrap</a>. Published with <a href="https://pages.github.com/">GitHub Pages.</a></span>
+            </container>
+        </footer>
+
+        <script src="/static/js/jquery.min.js"></script>
+        <!-- Make sure jquery is loaded first, then load colorbox -->
+        <script src="/static/js/jquery.colorbox-min.js"></script>
+        <script src="/static/js/load-colorbox.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var url = window.location;
+                $('.navbar-nav a[href="'+ url +'test"]').parent().addClass('active');
+                $('.navbar-nav a').filter(function() {
+                     return this.href == url;
+                }).parent().addClass('active');
+            });
+        </script> 
+    </body>
+</html>

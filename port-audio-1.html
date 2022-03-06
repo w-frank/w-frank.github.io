@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Will Frank</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Will Frank">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="/static/css/colorbox.css" rel="stylesheet">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="/static/css/style.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Space Mono">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" >
+        
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <h1 class="navbar-brand" href="https://willfrank.co.uk">Will Frank</h1>
+                    </div>
+                    <!--<div class="collapse navbar-collapse">-->
+                    <ul class="nav navbar-nav">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/pages/portfolio.html">Portfolio</a></li>
+                                <li><a href="/pages/about.html">About</a></li>
+                    </ul>
+                    <!--</div>-->
+            </nav>
+<div class="row">
+    <div class="col-md-8">
+        <h1><a href="/port-audio-1.html">Build and Use PortAudio on Linux (using CMake)</a></h1>
+        <label class="tag" href="/tags/audio.html">audio</label>
+        <label class="tag" href="/tags/linux.html">linux</label>
+        <label class="tag" href="/tags/programming.html">programming</label>
+        </label>
+        <label class="font-weight-normal text-muted">&#8226 13 November, 2021</label>
+        <p><h2>PortAudio - portable audio I/O library</h2>
+<p>PortAudio is a portable audio I/O library designed for cross-platform support of
+audio. It uses either a callback mechanism to request audio processing, or
+blocking read/write calls to buffer data between the native audio subsystem and
+the client. Audio can be processed in various formats, including 32 bit floating
+point, and will be converted to the native format internally.</p>
+<h2>Installing the ALSA Development Kit</h2>
+<p>The OSS sound API is very old and not well supported. It is recommended that you
+use the ALSA sound API. The PortAudio configure script will look for the ALSA
+SDK. You can install the ALSA SDK on Ubuntu using:</p>
+<div class="highlight"><pre><span></span><code>sudo apt-get install libasound-dev
+</code></pre></div>
+
+<p>You might need to use yum, or some other package manager, instead of apt-get on
+your machine.</p>
+<p>If you do not install ALSA then you might get a message when testing that says
+you have no audio devices.</p>
+<p>You can find out more about ALSA here: <a href="http://www.alsa-project.org/">http://www.alsa-project.org/</a></p>
+<h2>Installing PortAudio</h2>
+<ol>
+<li>Get the latest stable release of PortAudio from <a href="http://files.portaudio.com/download.html">here</a>.
+At the time of writing this is v19.7.0.</li>
+<li>Extract the tarball <code>tar -xvzf pa_stable_v190700_20210406.tgz</code> to your
+preferred location. I put it in <code>/opt/portaudio/</code>.
+Alternatively, get the latest development version from GitHub:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/PortAudio/portaudio.git
+</code></pre></div>
+
+<ol>
+<li>PortAudio can be built and installed with CMake. You should obtain a recent 
+version of CMake from <a href="http://www.cmake.org">http://www.cmake.org</a> if you do not have one already.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>cmake <span class="o">{</span>portaudio path<span class="o">}</span> -G <span class="s2">&quot;Unix Makefiles&quot;</span> -DCMAKE_INSTALL_PREFIX<span class="o">=</span>/install_location
+make
+make install
+</code></pre></div>
+
+<p>Alternatively, standard GNU autotools configure/make can be used to build
+PortAudio in Linux environments.</p>
+<div class="highlight"><pre><span></span><code><span class="o">{</span>portaudio path<span class="o">}</span>/configure --prefix<span class="o">=</span>/install_location
+make
+make install
+</code></pre></div>
+
+<p>On my system running Ubuntu 20.04.3 LTS, I installed PortAudio in <code>/usr/local/lib/</code>.</p>
+<h2>Building with PortAudio using CMake</h2>
+<p>PortAudio defines the following CMake targets:</p>
+<ul>
+<li><code>portaudio_static</code> for a static library</li>
+<li><code>portaudio</code> for a dynamic library</li>
+</ul>
+<p>To use the CMake package finder you need to tell CMake where to find PortAudio.</p>
+<div class="highlight"><pre><span></span><code>list<span class="o">(</span>APPEND CMAKE_PREFIX_PATH /usr/local/lib/portaudio/<span class="o">)</span>
+</code></pre></div>
+
+<p>then you may need to include some of the platform independent code headers if
+you wish to use them.</p>
+<div class="highlight"><pre><span></span><code>target_include_directories<span class="o">(</span>portaudio_test PRIVATE /opt/portaudio/src/common/<span class="o">)</span>
+</code></pre></div>
+
+<p>A complete example <code>CMakeLists.txt</code> is:</p>
+<div class="highlight"><pre><span></span><code>cmake_minimum_required<span class="o">(</span>VERSION <span class="m">2</span>.8<span class="o">)</span>
+
+project<span class="o">(</span>portaudio_test<span class="o">)</span>
+
+<span class="c1"># Set the build directory</span>
+set<span class="o">(</span>CMAKE_BINARY_DIR <span class="si">${</span><span class="nv">CMAKE_SOURCE_DIR</span><span class="si">}</span>/bin<span class="o">)</span>
+set<span class="o">(</span>EXECUTABLE_OUTPUT_PATH <span class="si">${</span><span class="nv">CMAKE_BINARY_DIR</span><span class="si">}</span><span class="o">)</span>
+set<span class="o">(</span>LIBRARY_OUTPUT_PATH <span class="si">${</span><span class="nv">CMAKE_BINARY_DIR</span><span class="si">}</span><span class="o">)</span>
+
+include_directories<span class="o">(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">)</span>
+
+list<span class="o">(</span>APPEND CMAKE_PREFIX_PATH /usr/local/lib/portaudio/<span class="o">)</span>
+find_package<span class="o">(</span> portaudio REQUIRED <span class="o">)</span>
+
+add_executable<span class="o">(</span>portaudio_test <span class="si">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="si">}</span>/portaudio_test.cpp<span class="o">)</span>
+target_include_directories<span class="o">(</span>portaudio_test PRIVATE /opt/portaudio/src/common/<span class="o">)</span>
+target_link_libraries<span class="o">(</span>portaudio_test portaudio<span class="o">)</span>
+</code></pre></div>
+
+<h2>References</h2>
+<ul>
+<li><a href="http://files.portaudio.com/">PortAudio</a></li>
+<li><a href="https://github.com/PortAudio/portaudio">https://github.com/PortAudio/portaudio</a></li>
+<li><a href="http://www.portaudio.com/docs/v19-doxydocs/compile_cmake.html">PortAudio on Windows, OS X or Linux via. CMake</a></li>
+</ul></p>
+        <h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'willfrank-co-uk'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    <div class="col-md-3">
+        <h4>Recent Posts</h4>
+        <ul id="recent-posts">
+            <li><a href="/stm32-vcp.html">STM32: USB Virtual COM Port (VCP)</a></li>
+            <li><a href="/stm32-led.html">STM32: Blink an LED</a></li>
+            <li><a href="/sending-files-with-kermit-1.html">Sending Files Over Serial With Kermit</a></li>
+            <li><a href="/port-audio-1.html">Build and Use PortAudio on Linux (using CMake)</a></li>
+        </ul>
+        <!--
+        <h4>Categories</h4>
+        <ul id="category-list">
+            <li><a href="/category/linux.html">Linux</a></li>
+            <li><a href="/category/stm32.html">STM32</a></li>
+        </ul>
+        -->
+        <h4>Tags</h4>
+        <ul id="tag-list">
+            <li><a href="/tag/stm32.html">STM32</a></li>
+            <li><a href="/tag/arm.html">ARM</a></li>
+            <li><a href="/tag/linux.html">linux</a></li>
+            <li><a href="/tag/programming.html">programming</a></li>
+            <li><a href="/tag/audio.html">audio</a></li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <footer class="blog-footer">
+            <div class="container">
+                <span class="text-muted">Will Frank 2022. Handcrafted using <a href="https://www.python.org/">Python</a>, <a href="https://docs.getpelican.com/en/stable/">Pelican</a> and <a href="https://getbootstrap.com/">Bootstrap</a>. Published with <a href="https://pages.github.com/">GitHub Pages.</a></span>
+            </container>
+        </footer>
+
+        <script src="/static/js/jquery.min.js"></script>
+        <!-- Make sure jquery is loaded first, then load colorbox -->
+        <script src="/static/js/jquery.colorbox-min.js"></script>
+        <script src="/static/js/load-colorbox.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var url = window.location;
+                $('.navbar-nav a[href="'+ url +'test"]').parent().addClass('active');
+                $('.navbar-nav a').filter(function() {
+                     return this.href == url;
+                }).parent().addClass('active');
+            });
+        </script> 
+    </body>
+</html>
