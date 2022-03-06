@@ -2,7 +2,7 @@ Title: About
 
 My name is Will. I'm an engineer, designer, and writer currently
 based in Oxford, UK. My technical interests span embedded systems, digital
-signal processing, and control systems particularly in the fields of audio
+signal processing, and control systems, particularly in the fields of audio
 electronics, renewable energy, and agricultural technology.
 
 I have a background in the research and development of scientific

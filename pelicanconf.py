@@ -50,9 +50,8 @@ DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = True
 
 MENUITEMS = (
-    ('Home', '/'),
+    ('Blog', '/'),
     ('Portfolio', '/pages/portfolio.html'),
-    #('Projects', '/pages/projects.html'),
     ('About', '/pages/about.html')
 )
 

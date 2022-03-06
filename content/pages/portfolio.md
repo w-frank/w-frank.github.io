@@ -1,13 +1,13 @@
 Title: Portfolio
 
-## Bipolar ADC driver
+# Bipolar ADC driver
 
 Single channel ADC front-end for driving medium speed, 16-bit SAR ADCs from a
 bipolar input.
 
 ![img-quart-width](../images/portfolio/adc-driver.png)
 
-### Features
+## Features
 * Default level translation: +/-12 V -> 0 - +5 V.
 * 15 MHz bandwidth.
 * 50 ohm or high input impedance (10^13 ohm).
@@ -16,14 +16,14 @@ bipolar input.
 * Select on-board (+5 V) or external voltage reference, for configurable ranges.
 <br/><br/>
 
-## Pmod Pulse
+# Pmod Pulse
 
 Configurable dual channel digital output for driving lengths of terminated
 coaxial cable from microcontrollers / FPGAs.
 
 ![img-quart-width](../images/portfolio/pmod-pulse.png)
 
-### Features
+## Features
 * Up to 2 digital outputs on SMA connectors.
 * TTL output switching levels.
 * Up to 256 mA max. output current capability (configurable with zero-ohm resistors).
@@ -32,14 +32,14 @@ coaxial cable from microcontrollers / FPGAs.
 * 6-pin Digilent Pmod Interface Specification compatible.
 <br/><br/>
 
-## Dual Voltage Regulator
+# Dual Voltage Regulator
 
 Dual fixed voltage regulator module based on LM78XX / LM79XX.
 
 ![img-quart-width](../images/portfolio/dual-voltage-regulator.png)
 ![img-quart-width](../images/portfolio/voltage-regulator.png)
 
-### Features
+## Features
 * +7-38 V input -> +5-24 V output, -7-30 V input -> -5-15 V output.
 * Output current: up to 1.5 A.
 * Voltage regulators: 1 x LM78XX, 1 x LM79XX.
@@ -47,14 +47,14 @@ Dual fixed voltage regulator module based on LM78XX / LM79XX.
 * On board and external power LED indicators.
 <br/><br/>
 
-## Data Acquisition Connection Unit
+# Data Acquisition Connection Unit
 
 Signal connection unit designed for a multi-channel scientific data acquisition
 system.
 
 ![img-half-width](../images/portfolio/daq-connection-unit.jpg)
 
-### Features
+## Features
 * 1U, 19" rack mount aluminium chassis.
 * Designed for +/- 10 V differential input signals.
 * x16 inputs (dual pin LEMO connectors) on front.
@@ -65,7 +65,7 @@ system.
 * Optional IEC mains inlet connector, if internal power is required.
 <br/><br/>
 
-## Current Amplifier Eurocrate
+# Current Amplifier Eurocrate
 
 Modular 4 channel current amplifiers in Eurocard format for ion detector data
 acquisition system.
@@ -74,7 +74,7 @@ acquisition system.
 ![img-quart-width](../images/portfolio/pulse-gen-eurocard.jpg)
 ![img-quart-width](../images/portfolio/current-amp-eurocrate.jpg)
 
-### Features
+## Features
 * Transimpedance gain of 3000.
 * Relay selectable 10 kHz or 30 MHz bandwidth.
 * 50 ohm input impedance.
