@@ -38,20 +38,18 @@
         <label class="tag" href="/tags/programming.html">programming</label>
         </label>
         <label class="font-weight-normal text-muted">&#8226 12 February, 2022</label>
-        <p><ol>
-<li>Open STM32CubeMX and start a new STM32 project.</li>
-<li>I'm using the STM32 Discovery board which has an STM32F407VG microcontroller
+        <p><p>Open STM32CubeMX and start a new STM32 project.</p>
+<p>I'm using the STM32F4 Discovery board which has an STM32F407VG microcontroller
 and 4 onboard LEDs. For this project, I'm using the STM32 Cube Framework with
-the HAL libraries. I'm developing on a PC running Ubuntu 20.04.3. Select
-STM32F4-DISC1 from the board selector.</li>
-<li>The STM32F4 Discovery board has the following LEDs available to the user:</li>
-</ol>
+the HAL libraries. I'm also developing on a PC running Ubuntu 20.04.3.</p>
+<p>Select STM32F4-DISC1 from the board selector.</p>
+<p>The STM32F4 Discovery board has the following LEDs available to the user:</p>
 <table>
 <thead>
 <tr>
-<th>LED</th>
-<th>NAME</th>
-<th>PIN</th>
+<th><div style="width:75px">LED</div></th>
+<th><div style="width:75px">NAME</div></th>
+<th><div style="width:75px">PIN</div></th>
 </tr>
 </thead>
 <tbody>
@@ -75,13 +73,16 @@ STM32F4-DISC1 from the board selector.</li>
 <td>LD6</td>
 <td>PD15</td>
 </tr>
+<tr>
+<td><br></td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table>
-<p>For this tutorial we'll use the green LED. In the MCU pinout viewer, set PD12
+<p>For this tutorial we'll use the green LED (LD4 - port D, pin 12). In the MCU pinout viewer, set PD12
 to GPIO_Output. Save and generate the code.</p>
-<ol>
-<li>In the code editor, add the following to the main function in <code>main.c</code>:</li>
-</ol>
+<p>In the code editor, add the following to the main function in <code>main.c</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="cm">/* Infinite loop */</span><span class="w"></span>
 <span class="cm">/* USER CODE BEGIN WHILE */</span><span class="w"></span>
 <span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
@@ -96,10 +97,11 @@ to GPIO_Output. Save and generate the code.</p>
 <span class="cm">/* USER CODE END 3 */</span><span class="w"></span>
 </code></pre></div>
 
-<ol>
-<li>Build the program and download it to the board. You should see the green LED
-flashing every 1 second.</li>
-</ol></p>
+<p>Build the program and download it to the board. You should see the green LED
+flashing every 1 second.</p>
+<p>You probably already guessed it but the <code>HAL_Delay()</code> function pauses the execution
+of the program for a given number of milliseconds (500 ms in the code above).
+Adjusting this will speed up or slow down the blinking of the LED.</p></p>
         <h2>Comments</h2>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
