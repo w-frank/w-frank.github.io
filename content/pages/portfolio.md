@@ -49,10 +49,12 @@ Dual fixed voltage regulator module based on LM78XX / LM79XX.
 
 # Data Acquisition Connection Unit
 
-Signal connection unit designed for a multi-channel scientific data acquisition
-system.
+Multi-channel signal connection unit designed for a data acquisition system at a
+scientific facility.
 
-![img-half-width](../images/portfolio/daq-connection-unit.jpg)
+![img-quart-width](../images/portfolio/daq-connection-unit-front.jpg)
+![img-quart-width](../images/portfolio/daq-connection-unit-back.jpg)
+![img-quart-width](../images/portfolio/dws-diags.jpg)
 
 ## Features
 * 1U, 19" rack mount aluminium chassis.
@@ -67,7 +69,7 @@ system.
 
 # Current Amplifier Eurocrate
 
-Modular 4 channel current amplifiers in Eurocard format for ion detector data
+Modular 4 channel current amplifiers in Eurocard format for an ion detector data
 acquisition system.
 
 ![img-quart-width](../images/portfolio/current-amp-eurocard.jpg)
