@@ -25,7 +25,7 @@ coaxial cable from microcontrollers / FPGAs.
 
 ## Features
 * Up to 2 digital outputs on SMA connectors.
-* TTL output switching levels.
+* TTL output levels.
 * Up to 256 mA max. output current capability (configurable with zero-ohm resistors).
 * Optional AUX output (configurable with zero-ohm resistors).
 * Optional back termination resistors for double-ended or series termination.
@@ -65,6 +65,23 @@ scientific facility.
 * Transient protection on all inputs (bi-directional TVS diodes: +/-30 V clamp,
 1.5 kW peak pulse).
 * Optional IEC mains inlet connector, if internal power is required.
+<br/><br/>
+
+# Trigger Distribution Unit
+
+Bespoke unit for distributing timing triggers for an ion detector data acquisition
+system.
+
+![img-quart-width](../images/portfolio/trigger-distribution-front.jpg)
+![img-quart-width](../images/portfolio/trigger-distribution-back.jpg)
+
+## Features
+* 1U, 19" rack mount aluminium chassis.
+* Fan-out two independent differential trigger inputs (BNO connectors) to x8 single-ended outputs (SMB connectors).
+* Optional single-ended AUX inputs (SMB connectors).
+* Buffered outputs for driving TTL levels into 50 ohm loads.
+* +5 V power LED indicator.
+* Fused +5 V external power input on rear (LEMO connector).
 <br/><br/>
 
 # Current Amplifier Eurocrate
