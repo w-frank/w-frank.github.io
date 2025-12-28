@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     font-family: 'poppins';
-    font-size: 0.875rem !important;
+    font-size: 1rem !important;
     overflow-y: scroll;
     color: #333;
 }
@@ -24,10 +24,9 @@ html, body {
 }
 
 .navbar-nav {
-    font-size: 16px !important;
+    font-size: 1.25rem !important;
     float: none;
     padding: 1rem 0px;
-    font-size: 2.5rem;
     text-decoration: none !important;
     color: #333;
 }
@@ -40,6 +39,7 @@ html, body {
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 1rem;
+        margin: 1rem 0rem;
         font-size: 1.25rem;
     }
 /*}*/
@@ -51,6 +51,7 @@ html, body {
 
 .navbar-default .navbar-nav > li {
     margin: 0.25rem .25rem;
+    text-align: center;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -127,7 +128,7 @@ h3 {
 }
 
 p {
-    font-size: 0.875rem !important;
+    font-size: 1rem !important;
 }
 
 a:link {
@@ -209,7 +210,7 @@ article {
 }
 
 .page {
-    margin-top: 6.25rem;
+    margin-top: 8rem;
 }
 
 img[alt=img-full-width] {
