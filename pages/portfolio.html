@@ -5,11 +5,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Will Frank">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="/static/css/colorbox.css" rel="stylesheet">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
         <link href="/static/css/style.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Space Mono">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" >
@@ -21,19 +24,23 @@
                     <div class="navbar-header">
                         <h1 class="navbar-brand" href="https://willfrank.co.uk">Will Frank</h1>
                     </div>
-                    <!--<div class="collapse navbar-collapse">-->
-                    <ul class="nav navbar-nav">
-                                <li><a href="/">Blog</a></li>
-                                <li><a href="/pages/portfolio.html">Portfolio</a></li>
-                                <li><a href="/pages/about.html">About</a></li>
+                    <ul class="nav navbar-nav d-flex flex-column flex-sm-row">
+                                <li class="nav-item">
+                                    <a class="nav-link"  href="/">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"  href="/pages/portfolio.html">Portfolio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"  href="/pages/about.html">About</a>
+                                </li>
                     </ul>
-                    <!--</div>-->
             </nav>
 <div class='page'>
     <div><h1>Bipolar ADC driver</h1>
 <p>Single channel ADC front-end for driving medium speed, 16-bit SAR ADCs from a
 bipolar input.</p>
-<p><img alt="img-quart-width" src="../images/portfolio/adc-driver.png"></p>
+<p><img alt="img-half-width" src="../images/portfolio/adc-driver.png"></p>
 <h2>Features</h2>
 <ul>
 <li>Default level translation: +/-12 V -&gt; 0 - +5 V.</li>
@@ -47,7 +54,7 @@ bipolar input.</p>
 <h1>Pmod Pulse</h1>
 <p>Configurable dual channel digital output for driving lengths of terminated
 coaxial cable from microcontrollers / FPGAs.</p>
-<p><img alt="img-quart-width" src="../images/portfolio/pmod-pulse.png"></p>
+<p><img alt="img-half-width" src="../images/portfolio/pmod-pulse.png"></p>
 <h2>Features</h2>
 <ul>
 <li>Up to 2 digital outputs on SMA connectors.</li>
@@ -60,8 +67,8 @@ coaxial cable from microcontrollers / FPGAs.</p>
 </ul>
 <h1>Dual Voltage Regulator</h1>
 <p>Dual fixed voltage regulator module based on LM78XX / LM79XX.</p>
-<p><img alt="img-quart-width" src="../images/portfolio/dual-voltage-regulator.png">
-<img alt="img-quart-width" src="../images/portfolio/voltage-regulator.png"></p>
+<p><img alt="img-half-width" src="../images/portfolio/dual-voltage-regulator.png">
+<img alt="img-half-width" src="../images/portfolio/voltage-regulator.png"></p>
 <h2>Features</h2>
 <ul>
 <li>+7-38 V input -&gt; +5-24 V output, -7-30 V input -&gt; -5-15 V output.</li>
@@ -74,9 +81,9 @@ coaxial cable from microcontrollers / FPGAs.</p>
 <h1>Data Acquisition Connection Unit</h1>
 <p>Multi-channel signal connection unit designed for a data acquisition system at a
 scientific facility.</p>
-<p><img alt="img-quart-width" src="../images/portfolio/daq-connection-unit-front.jpg">
-<img alt="img-quart-width" src="../images/portfolio/daq-connection-unit-back.jpg">
-<img alt="img-quart-width" src="../images/portfolio/dws-diags.jpg"></p>
+<p><img alt="img-half-width" src="../images/portfolio/daq-connection-unit-front.jpg">
+<img alt="img-half-width" src="../images/portfolio/daq-connection-unit-back.jpg">
+<img alt="img-half-width" src="../images/portfolio/dws-diags.jpg"></p>
 <h2>Features</h2>
 <ul>
 <li>1U, 19" rack mount aluminium chassis.</li>
@@ -92,8 +99,8 @@ scientific facility.</p>
 <h1>Trigger Distribution Unit</h1>
 <p>Bespoke unit for distributing timing triggers for an ion detector data acquisition
 system.</p>
-<p><img alt="img-quart-width" src="../images/portfolio/trigger-distribution-front.jpg">
-<img alt="img-quart-width" src="../images/portfolio/trigger-distribution-back.jpg"></p>
+<p><img alt="img-half-width" src="../images/portfolio/trigger-distribution-front.jpg">
+<img alt="img-half-width" src="../images/portfolio/trigger-distribution-back.jpg"></p>
 <h2>Features</h2>
 <ul>
 <li>1U, 19" rack mount aluminium chassis.</li>
@@ -107,9 +114,9 @@ system.</p>
 <h1>Current Amplifier Eurocrate</h1>
 <p>Modular 4 channel current amplifiers in Eurocard format for an ion detector data
 acquisition system.</p>
-<p><img alt="img-quart-width" src="../images/portfolio/current-amp-eurocard.jpg">
-<img alt="img-quart-width" src="../images/portfolio/pulse-gen-eurocard.jpg">
-<img alt="img-quart-width" src="../images/portfolio/current-amp-eurocrate.jpg"></p>
+<p><img alt="img-half-width" src="../images/portfolio/current-amp-eurocard.jpg">
+<img alt="img-half-width" src="../images/portfolio/pulse-gen-eurocard.jpg">
+<img alt="img-half-width" src="../images/portfolio/current-amp-eurocrate.jpg"></p>
 <h2>Features</h2>
 <ul>
 <li>Transimpedance gain of 3000.</li>
@@ -123,7 +130,7 @@ acquisition system.</p>
         </div>
         <footer class="blog-footer">
             <div class="container">
-                <span class="text-muted">Will Frank 2022. Handcrafted using <a href="https://www.python.org/">Python</a>, <a href="https://docs.getpelican.com/en/stable/">Pelican</a> and <a href="https://getbootstrap.com/">Bootstrap</a>. Published with <a href="https://pages.github.com/">GitHub Pages.</a></span>
+                <span class="text-muted">Will Frank 2026. Handcrafted using <a href="https://www.python.org/">Python</a>, <a href="https://docs.getpelican.com/en/stable/">Pelican</a> and <a href="https://getbootstrap.com/">Bootstrap</a>. Published with <a href="https://pages.github.com/">GitHub Pages.</a></span>
             </container>
         </footer>
 
