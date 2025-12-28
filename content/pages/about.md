@@ -44,7 +44,7 @@ Requirements and specifications, design documents, test procedures.
 
 Project budgets and schedules.
 
-**Connect me with me on [GitHub](https://github.com/w-frank):**
+**Connect with me on [GitHub](https://github.com/w-frank):**
 
 [![GitHub](../images/GitHub-Mark-32px.png)](https://github.com/w-frank)
 
