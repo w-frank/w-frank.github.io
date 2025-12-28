@@ -1,14 +1,14 @@
 html, body {
     margin: 0;
     font-family: 'poppins';
-    font-size: 14px !important;
+    font-size: 0.875rem !important;
     overflow-y: scroll;
     color: #333;
 }
 
 .navbar {
-    margin-top: 25px;
-    margin-bottom: 80px;
+    margin-top: 1rem;
+    margin-bottom: 6rem;
 }
 
 .navbar-default {
@@ -18,7 +18,7 @@ html, body {
 
 .navbar-header {
     float: left;
-    padding-top: 15px;
+    padding: 1.5rem 0rem;
     text-align: center;
     width: 100%;
 }
@@ -26,8 +26,8 @@ html, body {
 .navbar-nav {
     font-size: 16px !important;
     float: none;
-    padding-top: 20px;
-    font-size: 40px;
+    padding: 1rem 0px;
+    font-size: 2.5rem;
     text-decoration: none !important;
     color: #333;
 }
@@ -39,8 +39,8 @@ html, body {
         top: 125%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding-top: 40px;
-        font-size: 20px;
+        padding: 1rem;
+        font-size: 1.25rem;
     }
 /*}*/
 
@@ -49,10 +49,13 @@ html, body {
 
 }
 
+.navbar-default .navbar-nav > li {
+    margin: 0.25rem .25rem;
+}
+
 .navbar-default .navbar-nav > li > a {
     padding: .25rem 0.6rem;
-    margin-left: .25rem;
-    margin-right: .25rem;
+    margin: 2rem .25rem;
     background:#fff;
     text-decoration: none;
     color: #ff5e5b;
@@ -65,7 +68,6 @@ html, body {
     background:#ff5e5b;
     font-weight: bold;
 }
-
 
 .navbar-default .navbar-nav > li.active > a {
     text-decoration: none;
@@ -90,13 +92,13 @@ html, body {
 }
 
 .entry-content {
-    padding-bottom: 10px !important;
+    padding-bottom: .625rem !important;
 }
 
 h1 {
     font-size: 22px !important;
     color: #333;
-    border-bottom: 8px solid rgba(28,232,181,0.6);
+    border-bottom: .5rem solid rgba(28,232,181,0.6);
     display: table;
     /*padding-top: .5em;*/
     margin-bottom: 0.8em;
@@ -104,11 +106,12 @@ h1 {
 }
 
 h1.navbar-brand {
-    font-size: 26px !important;
+    font-size: 1.625rem !important;
     float: none;
     letter-spacing: 0.3em !important;
-    border-bottom: 0px;
-    margin-bottom: 0px;
+    border-bottom: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 0rem;
     text-align: center;
     display: inline;
     /*padding-top: .5em;*/
@@ -116,15 +119,15 @@ h1.navbar-brand {
 
 
 h2 {
-    font-size: 20px !important;
+    font-size: 1.25rem !important;
 }
 
 h3 {
-    font-size: 20px !important;
+    font-size: 1.25rem !important;
 }
 
 p {
-    font-size: 14px !important;
+    font-size: 0.875rem !important;
 }
 
 a:link {
@@ -177,28 +180,28 @@ h1, h2, h3, h4, .navbar-brand {
     font-family: 'Space Mono';
     color: #333;
     font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: .625rem ;
+    margin-bottom: .625rem;
 }
 
 label.tag {
     color: #fff;
     background: rgba(28,232,181,0.6);
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: .375rem;
+    padding-right: .375rem;
 }
 
 .item img {
-    height: 450px !important;
-    width: 850px !important;
+    height: 28rem !important;
+    width: 53rem !important;
 }
 
 .blog-footer {
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 article {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .col-md-8 {
@@ -206,13 +209,15 @@ article {
 }
 
 .page {
-    margin-top: 100px;
+    margin-top: 6.25rem;
 }
 
 img[alt=img-full-width] {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     width: 90%;
 }
 
@@ -220,6 +225,8 @@ img[alt=img-half-width] {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     width: 50%;
 }
 
@@ -227,6 +234,8 @@ img[alt=img-quart-width] {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 25%;
 }
 

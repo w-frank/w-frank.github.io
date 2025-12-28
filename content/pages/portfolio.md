@@ -5,7 +5,7 @@ Title: Portfolio
 Single channel ADC front-end for driving medium speed, 16-bit SAR ADCs from a
 bipolar input.
 
-![img-quart-width](../images/portfolio/adc-driver.png)
+![img-half-width](../images/portfolio/adc-driver.png)
 
 ## Features
 * Default level translation: +/-12 V -> 0 - +5 V.
@@ -21,7 +21,7 @@ bipolar input.
 Configurable dual channel digital output for driving lengths of terminated
 coaxial cable from microcontrollers / FPGAs.
 
-![img-quart-width](../images/portfolio/pmod-pulse.png)
+![img-half-width](../images/portfolio/pmod-pulse.png)
 
 ## Features
 * Up to 2 digital outputs on SMA connectors.
@@ -36,8 +36,8 @@ coaxial cable from microcontrollers / FPGAs.
 
 Dual fixed voltage regulator module based on LM78XX / LM79XX.
 
-![img-quart-width](../images/portfolio/dual-voltage-regulator.png)
-![img-quart-width](../images/portfolio/voltage-regulator.png)
+![img-half-width](../images/portfolio/dual-voltage-regulator.png)
+![img-half-width](../images/portfolio/voltage-regulator.png)
 
 ## Features
 * +7-38 V input -> +5-24 V output, -7-30 V input -> -5-15 V output.
@@ -52,9 +52,9 @@ Dual fixed voltage regulator module based on LM78XX / LM79XX.
 Multi-channel signal connection unit designed for a data acquisition system at a
 scientific facility.
 
-![img-quart-width](../images/portfolio/daq-connection-unit-front.jpg)
-![img-quart-width](../images/portfolio/daq-connection-unit-back.jpg)
-![img-quart-width](../images/portfolio/dws-diags.jpg)
+![img-half-width](../images/portfolio/daq-connection-unit-front.jpg)
+![img-half-width](../images/portfolio/daq-connection-unit-back.jpg)
+![img-half-width](../images/portfolio/dws-diags.jpg)
 
 ## Features
 * 1U, 19" rack mount aluminium chassis.
@@ -72,8 +72,8 @@ scientific facility.
 Bespoke unit for distributing timing triggers for an ion detector data acquisition
 system.
 
-![img-quart-width](../images/portfolio/trigger-distribution-front.jpg)
-![img-quart-width](../images/portfolio/trigger-distribution-back.jpg)
+![img-half-width](../images/portfolio/trigger-distribution-front.jpg)
+![img-half-width](../images/portfolio/trigger-distribution-back.jpg)
 
 ## Features
 * 1U, 19" rack mount aluminium chassis.
@@ -89,9 +89,9 @@ system.
 Modular 4 channel current amplifiers in Eurocard format for an ion detector data
 acquisition system.
 
-![img-quart-width](../images/portfolio/current-amp-eurocard.jpg)
-![img-quart-width](../images/portfolio/pulse-gen-eurocard.jpg)
-![img-quart-width](../images/portfolio/current-amp-eurocrate.jpg)
+![img-half-width](../images/portfolio/current-amp-eurocard.jpg)
+![img-half-width](../images/portfolio/pulse-gen-eurocard.jpg)
+![img-half-width](../images/portfolio/current-amp-eurocrate.jpg)
 
 ## Features
 * Transimpedance gain of 3000.
