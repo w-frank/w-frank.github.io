@@ -34,7 +34,7 @@ PCBs. Using Cadence OrCAD or KiCad.
 Skilled in C, C++, and Python. Experienced with Arduino, ESP8266/ESP32,
 Raspberry Pi and STM32 ecosystems. Basic system administration on Linux.
 
-**Technical documentation:**
+<!-- **Technical documentation:**
 
 Product brochures, websites, and other marketing.
 
@@ -42,7 +42,7 @@ User, installation, and maintenance guides, manuals, tutorials.
 
 Requirements and specifications, design documents, test procedures.
 
-Project budgets and schedules.
+Project budgets and schedules. -->
 
 **Connect with me on [GitHub](https://github.com/w-frank):**
 
