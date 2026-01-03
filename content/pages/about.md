@@ -1,9 +1,9 @@
 Title: About
 
 My name is Will. I'm an engineer and designer currently
-living in beautiful Cumbria, UK. My technical interests span embedded systems, 
-digital signal processing, and control systems, particularly in the fields of 
-audio, energy systems, and agricultural technology.
+living in beautiful Cumbria in the UK. My technical interests span embedded 
+systems, digital signal processing, and control systems, particularly in the 
+fields of audio, energy systems, and agricultural technology.
 
 I have a background in embedded systems and the research and development of 
 scientific data acquisition and control systems, primarily for use on particle 
@@ -13,7 +13,7 @@ This site is for me to share what I've learnt on the [blog](https://www.willfran
 and archive various projects in my [portfolio](https://willfrank.co.uk/pages/portfolio.html).
 
 I have a range of experience across both analogue and digtial electronics
-design and software development:
+design as well as software development:
 
 **Hardware design:**
 
