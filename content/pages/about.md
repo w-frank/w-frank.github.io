@@ -48,3 +48,7 @@ Project budgets and schedules. -->
 
 [![GitHub](../images/GitHub-Mark-32px.png)](https://github.com/w-frank)
 
+**or on [Linkedin](https://www.linkedin.com/in/will-frank-62723836a/):**
+
+[![linkedin](../images/linkedin-34px.png)](https://www.linkedin.com/in/will-frank-62723836a/)
+
