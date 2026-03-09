@@ -12,7 +12,7 @@ accelerators.
 This site is for me to share what I've learnt on the [blog](https://www.willfrank.co.uk/),
 and archive various projects in my [portfolio](https://willfrank.co.uk/pages/portfolio.html).
 
-I have a range of experience across both analogue and digtial electronics
+I have a range of experience across both analogue and digital electronics
 design as well as software development:
 
 **Hardware design:**
